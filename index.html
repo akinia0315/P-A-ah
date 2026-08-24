@@ -1,6 +1,4 @@
-<!doctype html>
-<html lang="zh-CN">
-<head>
+<html lang="zh-CN"><head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
   <meta name="theme-color" content="#ece7e4">
@@ -18,7 +16,7 @@
   </style>
 </head>
 <body id="top">
-  <div class="progress" id="progress"></div>
+  <div class="progress" id="progress" style="width: 13.970483%;"></div>
   <header class="top"><div class="top-inner"><div class="brand"><span class="mark">✦</span><div><strong>兽舍提示词母版</strong><small>BEAST ARCHIVE / PROMPT</small></div></div><div class="adult">18+ · FICTIONAL · ALL ADULTS</div></div></header>
   <main>
     <section class="hero">
@@ -52,7 +50,7 @@
 
     <section class="panel custom" id="customPanel">
       <header class="panel-head"><div><small>GUIDED VARIABLES</small><h2>点选式客制母版</h2></div><span class="panel-index">02</span></header>
-      <input type="hidden" id="species" value="成年犬系兽人（女性）：黑褐短毛、敏锐立耳、细长尾巴，嗅觉与听觉敏锐">
+      <input type="hidden" id="species" value="成年犬系兽人（女性）：立耳、长尾、嗅觉与听觉敏锐，品种特征由体型与气质共同决定">
       <input type="hidden" id="age" value="二十一岁">
       <input type="hidden" id="body" value="高挑修长，肌肉线条利落，站姿端正而富有力量感">
       <input type="hidden" id="view" value="第二人称“你”">
@@ -63,8 +61,8 @@
       <input type="hidden" id="length" value="超长篇：每轮 4000–7000 汉字，一个阶段允许拆成多轮">
       <input type="hidden" id="escape" value="可穿插任意阶段；每次失败都必须改变后续规则与状态">
       <input type="hidden" id="arc" value="守序崩解：始终维持克制寡言的底色，从拒绝失态变成主动等待命令；变化发生在行为与依赖上，不突然更换人格">
-      <input type="hidden" id="ending" value="私人领养：在拍卖台被匿名饲主买走，公共权限被永久划掉，档案转为私人所有">
-      <input type="hidden" id="ingredients" value="编号覆盖；假释放测试；逃跑红签；铃声条件反射；气味认主；前后档案对照；领养面试">
+      <input type="hidden" id="ending" value="私人领养：在拍卖台被匿名饲主买走，公共使用权限被永久划掉，档案转为私人所有并进入专属饲养">
+      <input type="hidden" id="ingredients" value="编号覆盖：工作人员逐渐停止使用原名，只有编号和兽舍称呼能获得回应；逃跑红签：每次失败逃脱都会生成一张红色附页，写明过程、惩罚与永久新增权限；假释放测试：故意打开出口、解除牵引并制造无人看守的假象，用是否逃跑测试条件反射；铃声条件反射：不同铃声分别对应跪下、展示、进食、轮换与返回笼位；气味认主：通过衣物、手套与项圈上的气味建立辨认、靠近和安定反应；前后档案对照：定期并排播放刚被捕时的尖叫记录与当前服从录像，逐条比较变化；领养面试：候选饲主依照档案提问、下达口令并观察主角对不同关系风格的反应">
       <input type="hidden" id="userColor" value="#9b3851（暗粉）">
       <input type="hidden" id="extra" value="">
 
@@ -72,31 +70,31 @@
         <span class="section-label">01 / SUBJECT</span><h3>角色外壳</h3><p class="section-intro">每项都已经写好完整定义。直接点，不需要自己补人物小传。</p>
         <div class="choice-block" data-target="species" data-mode="single">
           <div class="choice-title">物种 <small>SINGLE</small></div><div class="choice-list">
-            <button class="choice active" data-default data-value="成年犬系兽人（女性）：立耳、长尾、嗅觉与听觉敏锐，品种特征由体型与气质共同决定" data-desc="犬的纪律感、认主本能与动物警觉适合完整的收容—驯养路线。">犬</button>
+            <button class="choice active" data-default="" data-value="成年犬系兽人（女性）：立耳、长尾、嗅觉与听觉敏锐，品种特征由体型与气质共同决定" data-desc="犬的纪律感、认主本能与动物警觉适合完整的收容—驯养路线。">犬</button>
             <button class="choice" data-value="成年猫娘：柔软猫耳、长尾、绒毛与爪尖敏感，动作轻而灵活" data-desc="猫科身体语言细密，适合炸毛、尾巴泄露心情与漂亮装扮的反差。">猫</button>
             <button class="choice" data-value="成年兔娘：长耳与短尾极其敏感，听觉敏锐，奔跑和惊跳反应明显" data-desc="脆弱、警觉和快速逃跑很突出，适合高惊恐与羞耻路线。">兔</button>
             <button class="choice" data-value="成年狐系兽人（女性）：宽大狐耳、蓬松长尾，嗅觉敏锐，外表妖冶而难以捉摸" data-desc="天然带魅惑和狡黠感，适合写主动勾引、假顺从与被反制。">狐</button>
             <button class="choice" data-value="成年狼系兽人（女性）：灰色兽耳与长尾，群体本能强，警戒、领地感和攻击性明显" data-desc="适合真实凶狠的反抗，以及兽舍群体规则对野性的逐步收编。">狼</button>
             <button class="choice custom-choice" data-custom="species" data-desc="保留完整提示词结构，只替换成你补充的成年物种。">＋自定义</button>
-          </div><div class="choice-explain"></div><div class="custom-line" data-custom-line="species"><input data-custom-input="species" placeholder="写一个成年物种，例如：成年雪豹兽人"></div>
+          </div><div class="choice-explain">犬的纪律感、认主本能与动物警觉适合完整的收容—驯养路线。</div><div class="custom-line" data-custom-line="species"><input data-custom-input="species" placeholder="写一个成年物种，例如：成年雪豹兽人"></div>
         </div>
         <div class="choice-block" data-target="age" data-mode="single">
           <div class="choice-title">年龄 <small>ADULT ONLY</small></div><div class="choice-list">
-            <button class="choice" data-value="十九岁" data-desc="明确成年但仍很年轻，适合生涩、第一次被收容与强烈身份落差。">19 岁</button><button class="choice active" data-default data-value="二十一岁" data-desc="年轻成年，兼具生涩与明确的成年身份。">21 岁</button><button class="choice" data-value="二十三岁" data-desc="仍年轻，但社会经验与自我控制稍强。">23 岁</button><button class="choice" data-value="二十五岁" data-desc="成熟度更高，失态时的反差更偏心理与身份。">25 岁</button><button class="choice" data-value="三十岁" data-desc="完全成熟、自持稳定，适合更强的身份与权力落差。">30 岁</button><button class="choice custom-choice" data-custom="age" data-desc="只接受十八岁及以上的明确成年年龄。">＋自定义</button>
-          </div><div class="choice-explain"></div><div class="custom-line" data-custom-line="age"><input data-custom-input="age" placeholder="填写 18 岁以上的年龄"></div>
+            <button class="choice" data-value="十九岁" data-desc="明确成年但仍很年轻，适合生涩、第一次被收容与强烈身份落差。">19 岁</button><button class="choice active" data-default="" data-value="二十一岁" data-desc="年轻成年，兼具生涩与明确的成年身份。">21 岁</button><button class="choice" data-value="二十三岁" data-desc="仍年轻，但社会经验与自我控制稍强。">23 岁</button><button class="choice" data-value="二十五岁" data-desc="成熟度更高，失态时的反差更偏心理与身份。">25 岁</button><button class="choice" data-value="三十岁" data-desc="完全成熟、自持稳定，适合更强的身份与权力落差。">30 岁</button><button class="choice custom-choice" data-custom="age" data-desc="只接受十八岁及以上的明确成年年龄。">＋自定义</button>
+          </div><div class="choice-explain">年轻成年，兼具生涩与明确的成年身份。</div><div class="custom-line" data-custom-line="age"><input data-custom-input="age" placeholder="填写 18 岁以上的年龄"></div>
         </div>
         <div class="choice-block" data-target="body" data-mode="single">
           <div class="choice-title">体型 <small>SINGLE</small></div><div class="choice-list">
-            <button class="choice active" data-default data-value="高挑修长，肌肉线条利落，站姿端正而富有力量感" data-desc="动作线条清楚，适合写端正姿态被迫改变的视觉反差。">高挑利落</button><button class="choice" data-value="中等体型，柔软匀称，腰臀曲线自然，抱住时有明显的柔软重量" data-desc="最均衡，适合多数姿势、体型差和长篇连续动作。">中等柔软</button><button class="choice" data-value="娇小但明确成年，骨架纤细，动作轻巧，体型差非常明显" data-desc="强化体型差与被完全控制的画面，但始终保持明确成年。">娇小成年</button><button class="choice" data-value="丰润成熟，胸腰臀曲线饱满，身体存在感与晃动感强" data-desc="强调成熟肉感、视觉重量与被展示时的丰盈。">丰润成熟</button><button class="choice" data-value="运动型体格，腰腹紧实、腿部有力，耐力与反抗能力都更强" data-desc="适合更真实的追捕、对抗，以及强韧身体被驯服的过程。">运动体格</button><button class="choice custom-choice" data-custom="body" data-desc="用一句话补充体型，其他描写标准仍由提示词负责。">＋自定义</button>
-          </div><div class="choice-explain"></div><div class="custom-line" data-custom-line="body"><input data-custom-input="body" placeholder="例如：中等偏丰润，腿长腰细"></div>
+            <button class="choice active" data-default="" data-value="高挑修长，肌肉线条利落，站姿端正而富有力量感" data-desc="动作线条清楚，适合写端正姿态被迫改变的视觉反差。">高挑利落</button><button class="choice" data-value="中等体型，柔软匀称，腰臀曲线自然，抱住时有明显的柔软重量" data-desc="最均衡，适合多数姿势、体型差和长篇连续动作。">中等柔软</button><button class="choice" data-value="娇小但明确成年，骨架纤细，动作轻巧，体型差非常明显" data-desc="强化体型差与被完全控制的画面，但始终保持明确成年。">娇小成年</button><button class="choice" data-value="丰润成熟，胸腰臀曲线饱满，身体存在感与晃动感强" data-desc="强调成熟肉感、视觉重量与被展示时的丰盈。">丰润成熟</button><button class="choice" data-value="运动型体格，腰腹紧实、腿部有力，耐力与反抗能力都更强" data-desc="适合更真实的追捕、对抗，以及强韧身体被驯服的过程。">运动体格</button><button class="choice custom-choice" data-custom="body" data-desc="用一句话补充体型，其他描写标准仍由提示词负责。">＋自定义</button>
+          </div><div class="choice-explain">动作线条清楚，适合写端正姿态被迫改变的视觉反差。</div><div class="custom-line" data-custom-line="body"><input data-custom-input="body" placeholder="例如：中等偏丰润，腿长腰细"></div>
         </div>
         <div class="choice-block" data-target="appearance" data-mode="single">
           <div class="choice-title">装束与视觉反差 <small>SINGLE</small></div><div class="choice-list">
-            <button class="choice active" data-default data-value="剪裁利落的黑色短裙、银色身份牌与窄皮项圈；冷硬装束突出端正与被控制的反差" data-desc="冷感、纪律化，适合犬系兽人与收容档案的秩序气质。">黑色制服</button><button class="choice" data-value="粉白短裙、柔软蝴蝶结、铃铛项圈与细腻蕾丝；越可爱越衬托粗暴物化" data-desc="把颜色与柔软全部集中在主角身上，强化甜美外观和遭遇的反差。">甜美裙装</button><button class="choice" data-value="极简白色检查服、编号腕带与一次性腿环；服装会随检查逐项拆解" data-desc="无菌、制度化，突出身体被当成待检器具。">白色检查服</button><button class="choice" data-value="拍卖礼装、宝石颈圈、薄纱与展示高跟鞋；华丽装饰只服务于定价和展示" data-desc="漂亮、昂贵却被商品化，适合拍卖和公开验看。">拍卖礼装</button><button class="choice" data-value="除项圈、编号牌与少量饰品外不着衣物；所有装饰都用于标识用途和归属" data-desc="视觉最直接，羞耻来源转向公开、编号与身体标记。">饰品标记</button><button class="choice custom-choice" data-custom="appearance" data-desc="补一套装束即可，环境反差与描写方式仍会自动生成。">＋自定义</button>
-          </div><div class="choice-explain"></div><div class="custom-line" data-custom-line="appearance"><input data-custom-input="appearance" placeholder="例如：红色旗袍、金属腿环和黑色项圈"></div>
+            <button class="choice active" data-default="" data-value="剪裁利落的黑色短裙、银色身份牌与窄皮项圈；冷硬装束突出端正与被控制的反差" data-desc="冷感、纪律化，适合犬系兽人与收容档案的秩序气质。">黑色制服</button><button class="choice" data-value="粉白短裙、柔软蝴蝶结、铃铛项圈与细腻蕾丝；越可爱越衬托粗暴物化" data-desc="把颜色与柔软全部集中在主角身上，强化甜美外观和遭遇的反差。">甜美裙装</button><button class="choice" data-value="极简白色检查服、编号腕带与一次性腿环；服装会随检查逐项拆解" data-desc="无菌、制度化，突出身体被当成待检器具。">白色检查服</button><button class="choice" data-value="拍卖礼装、宝石颈圈、薄纱与展示高跟鞋；华丽装饰只服务于定价和展示" data-desc="漂亮、昂贵却被商品化，适合拍卖和公开验看。">拍卖礼装</button><button class="choice" data-value="除项圈、编号牌与少量饰品外不着衣物；所有装饰都用于标识用途和归属" data-desc="视觉最直接，羞耻来源转向公开、编号与身体标记。">饰品标记</button><button class="choice custom-choice" data-custom="appearance" data-desc="补一套装束即可，环境反差与描写方式仍会自动生成。">＋自定义</button>
+          </div><div class="choice-explain">冷感、纪律化，适合犬系兽人与收容档案的秩序气质。</div><div class="custom-line" data-custom-line="appearance"><input data-custom-input="appearance" placeholder="例如：红色旗袍、金属腿环和黑色项圈"></div>
         </div>
         <div class="choice-block" data-target="view" data-mode="single">
-          <div class="choice-title">视角 <small>SINGLE</small></div><div class="choice-list"><button class="choice active" data-default data-value="第二人称“你”" data-desc="读者直接成为主角，沉浸与被命令感最强。">第二人称</button><button class="choice" data-value="第一人称“我”" data-desc="更适合碎片化内心独白和自我崩解。">第一人称</button><button class="choice" data-value="第三人称限知" data-desc="便于客制角色、观察全身姿态与多人位置。">第三人称</button></div><div class="choice-explain"></div>
+          <div class="choice-title">视角 <small>SINGLE</small></div><div class="choice-list"><button class="choice active" data-default="" data-value="第二人称“你”" data-desc="读者直接成为主角，沉浸与被命令感最强。">第二人称</button><button class="choice" data-value="第一人称“我”" data-desc="更适合碎片化内心独白和自我崩解。">第一人称</button><button class="choice" data-value="第三人称限知" data-desc="便于客制角色、观察全身姿态与多人位置。">第三人称</button></div><div class="choice-explain">读者直接成为主角，沉浸与被命令感最强。</div>
         </div>
       </div>
 
@@ -104,53 +102,53 @@
         <span class="section-label">02 / PERSONALITY</span><h3>气质底色</h3><p class="section-intro">不是只换一个标签；每个按钮都自带说话方式、抵抗理由和后期主动形态。</p>
         <div class="choice-block" data-target="persona" data-mode="single">
           <div class="choice-list">
-            <button class="choice active" data-default data-value="冷静、克制、警觉，受过严格纪律训练，习惯站得笔直、把情绪压进沉默里。她越狼狈越不肯出声，不靠挑衅讨罚；真正的软处是慢热而执拗的依赖，一旦认定某个命令便会认真服从，失态后只会偏开目光、悄悄把尾巴贴近。" data-set="allure=30,feral=86,brat=8,shame=88" data-desc="她的反差来自自持崩解，不会自动变成 Brat；后期仍寡言，只是身体和依赖先学会服从。">冷静自持</button>
+            <button class="choice active" data-default="" data-value="冷静、克制、警觉，受过严格纪律训练，习惯站得笔直、把情绪压进沉默里。她越狼狈越不肯出声，不靠挑衅讨罚；真正的软处是慢热而执拗的依赖，一旦认定某个命令便会认真服从，失态后只会偏开目光、悄悄把尾巴贴近。" data-set="allure=30,feral=86,brat=8,shame=88" data-desc="她的反差来自自持崩解，不会自动变成 Brat；后期仍寡言，只是身体和依赖先学会服从。">冷静自持</button>
             <button class="choice" data-value="媚软、骚气、黏人，天生会用眼神、软声、尾巴与若有若无的迎合勾人。她欲望强、容易被快感驯化，却仍因被看穿而羞耻；反抗来自恐慌与尊严，不是为了讨罚的挑衅。" data-set="allure=95,feral=70,brat=15,shame=82" data-desc="“骚”会落实到小动作与说话，不等于嘴欠；适合从会勾人却不肯承认，到主动讨要的路线。">媚软勾人</button>
             <button class="choice" data-value="野性、敏锐、难以靠近，初期反抗真实而凶狠。她不靠抬杠吸引注意；被驯化后，原本用于攻击和逃跑的动作逐渐变成急切迎合。" data-set="allure=25,feral=100,brat=5,shame=90" data-desc="重点是“曾经真的想逃，如今真的会主动求”，适合追捕和失败逃脱。">野性反差</button>
             <button class="choice" data-value="骄矜、漂亮、习惯被珍视，羞于承认强烈欲望。她在被迫失态后仍试图维持体面；后期的媚态来自高傲外壳被快感一点点拆开。" data-set="allure=70,feral=72,brat=20,shame=100" data-desc="语言保持漂亮克制，真正的崩塌从身体、表情和被迫求告中出现。">骄矜贵气</button>
             <button class="choice" data-value="典型 Brat：伶牙俐齿、故意挑衅、喜欢试探规则并讨来惩罚，反抗带有明显玩闹与挑逗意味；仍保留少量真实恐慌，避免全程只剩段子式抬杠。" data-set="allure=65,feral=68,brat=95,shame=55" data-desc="只有选中它才会把挑衅当作主要互动方式；其他人格不会被自动 Brat 化。">Brat</button>
             <button class="choice" data-value="怕生、敏感、倾向回避冲突，受压时会安静发抖而不是叫骂。她很难开口求助，后期依赖表现为紧跟命令、害怕独处和小心确认自己有没有被留下。" data-set="allure=35,feral=45,brat=0,shame=95" data-desc="低挑衅、高敏感，适合安静但浓烈的恐慌和依赖形成。">病弱怕生</button>
             <button class="choice custom-choice" data-custom="persona" data-desc="只补一句核心性格即可；说话、抵抗与变化逻辑仍由母版补全。">＋自定义</button>
-          </div><div class="choice-explain"></div><div class="custom-line" data-custom-line="persona"><input data-custom-input="persona" placeholder="例如：温柔人妻，表面包容，真正生气时反而安静"></div>
+          </div><div class="choice-explain">她的反差来自自持崩解，不会自动变成 Brat；后期仍寡言，只是身体和依赖先学会服从。</div><div class="custom-line" data-custom-line="persona"><input data-custom-input="persona" placeholder="例如：温柔人妻，表面包容，真正生气时反而安静"></div>
         </div>
       </div>
 
       <div class="form-section">
         <span class="section-label">03 / CONCENTRATION</span><h3>浓度与篇幅</h3><p class="section-intro">选档位即可，提示词会自动把档位解释成篇幅占比和动作密度。</p>
-        <div class="choice-block" data-target="lust" data-mode="single"><div class="choice-title">情色浓度</div><div class="choice-list"><button class="choice" data-value="35" data-desc="剧情和制度推进为主，露骨场景集中在关键节点。">剧情偏重</button><button class="choice active" data-default data-value="65" data-desc="剧情与露骨描写均衡，每阶段都有完整性场景。">高浓均衡</button><button class="choice" data-value="95" data-desc="肉体动作与感官描写占绝对主体，剧情只负责制造新的处境。">极荤长篇</button></div><div class="choice-explain"></div></div>
-        <div class="choice-block" data-target="rough" data-mode="single"><div class="choice-title">SM / 物化</div><div class="choice-list"><button class="choice" data-value="40" data-desc="保留控制和羞耻，但疼痛与物化相对克制。">轻度</button><button class="choice" data-value="75" data-desc="明确拘束、奖惩、口令和身体记录，强度逐阶段上升。">重度</button><button class="choice active" data-default data-value="95" data-desc="制度化物化与粗暴 SM 贯穿，身体用途和服从状态持续被记录。">极端档案</button></div><div class="choice-explain"></div></div>
-        <div class="choice-block" data-target="detail" data-mode="single"><div class="choice-title">感官密度</div><div class="choice-list"><button class="choice" data-value="55" data-desc="动作清楚但不过度拆分，适合节奏较快的长篇。">标准</button><button class="choice" data-value="82" data-desc="关键动作拆成触感、声音、视觉与心理多层。">高密</button><button class="choice active" data-default data-value="100" data-desc="显微镜式身体特写、镜头切换与环境反馈全部拉满。">显微特写</button></div><div class="choice-explain"></div></div>
-        <div class="choice-block" data-target="length" data-mode="single"><div class="choice-title">单轮长度</div><div class="choice-list"><button class="choice" data-value="标准长篇：每轮 2500–4000 汉字，完成一个场景" data-desc="适合手机阅读，一轮拥有完整起伏。">标准长篇</button><button class="choice active" data-default data-value="超长篇：每轮 4000–7000 汉字，一个阶段允许拆成多轮" data-desc="大段正文、更多对话和动作拆解，不急着赶阶段。">超长篇</button><button class="choice" data-value="档案连载：每个阶段拆成 2–4 轮，每轮只处理一个具体任务" data-desc="最慢、最细，适合持续选择和状态积累。">档案连载</button></div><div class="choice-explain"></div></div>
+        <div class="choice-block" data-target="lust" data-mode="single"><div class="choice-title">情色浓度</div><div class="choice-list"><button class="choice" data-value="35" data-desc="剧情和制度推进为主，露骨场景集中在关键节点。">剧情偏重</button><button class="choice active" data-default="" data-value="65" data-desc="剧情与露骨描写均衡，每阶段都有完整性场景。">高浓均衡</button><button class="choice" data-value="95" data-desc="肉体动作与感官描写占绝对主体，剧情只负责制造新的处境。">极荤长篇</button></div><div class="choice-explain">剧情与露骨描写均衡，每阶段都有完整性场景。</div></div>
+        <div class="choice-block" data-target="rough" data-mode="single"><div class="choice-title">SM / 物化</div><div class="choice-list"><button class="choice" data-value="40" data-desc="保留控制和羞耻，但疼痛与物化相对克制。">轻度</button><button class="choice" data-value="75" data-desc="明确拘束、奖惩、口令和身体记录，强度逐阶段上升。">重度</button><button class="choice active" data-default="" data-value="95" data-desc="制度化物化与粗暴 SM 贯穿，身体用途和服从状态持续被记录。">极端档案</button></div><div class="choice-explain">制度化物化与粗暴 SM 贯穿，身体用途和服从状态持续被记录。</div></div>
+        <div class="choice-block" data-target="detail" data-mode="single"><div class="choice-title">感官密度</div><div class="choice-list"><button class="choice" data-value="55" data-desc="动作清楚但不过度拆分，适合节奏较快的长篇。">标准</button><button class="choice" data-value="82" data-desc="关键动作拆成触感、声音、视觉与心理多层。">高密</button><button class="choice active" data-default="" data-value="100" data-desc="显微镜式身体特写、镜头切换与环境反馈全部拉满。">显微特写</button></div><div class="choice-explain">显微镜式身体特写、镜头切换与环境反馈全部拉满。</div></div>
+        <div class="choice-block" data-target="length" data-mode="single"><div class="choice-title">单轮长度</div><div class="choice-list"><button class="choice" data-value="标准长篇：每轮 2500–4000 汉字，完成一个场景" data-desc="适合手机阅读，一轮拥有完整起伏。">标准长篇</button><button class="choice active" data-default="" data-value="超长篇：每轮 4000–7000 汉字，一个阶段允许拆成多轮" data-desc="大段正文、更多对话和动作拆解，不急着赶阶段。">超长篇</button><button class="choice" data-value="档案连载：每个阶段拆成 2–4 轮，每轮只处理一个具体任务" data-desc="最慢、最细，适合持续选择和状态积累。">档案连载</button></div><div class="choice-explain">大段正文、更多对话和动作拆解，不急着赶阶段。</div></div>
       </div>
 
       <div class="form-section">
         <span class="section-label">04 / STORY ENGINE</span><h3>剧情骨架</h3><p class="section-intro">主线已经完整；不想改就保持默认全选。</p>
-        <div class="choice-block" data-target="stages" data-mode="multi" data-join=" → "><div class="choice-title">阶段 <small>MULTI</small></div><div class="choice-list"><button class="choice multi active" data-default data-value="捕获" data-desc="建立真实追逐、落网和第一笔逃跑记录。">捕获</button><button class="choice multi active" data-default data-value="登记" data-desc="删除原身份，以编号和用途建立制度化物化。">登记</button><button class="choice multi active" data-default data-value="检查" data-desc="记录敏感点、身体反应与可用状态。">检查</button><button class="choice multi active" data-default data-value="驯化" data-desc="用口令、奖惩、姿势与条件反射改变行为。">驯化</button><button class="choice multi active" data-default data-value="公共兽舍" data-desc="集中调用此前训练成果，轮换与公开记录推动主动化。">公共兽舍</button><button class="choice multi active" data-default data-value="拍卖" data-desc="梳洗、展示、验看、竞价与最终归属。">拍卖</button></div><div class="choice-explain"></div></div>
-        <div class="choice-block" data-target="escape" data-mode="single"><div class="choice-title">逃脱机制</div><div class="choice-list"><button class="choice active" data-default data-value="可穿插任意阶段；每次失败都必须改变后续规则与状态" data-desc="每次逃跑都造成永久后果，惩罚和新规则会带进后续阶段。">全程可触发</button><button class="choice" data-value="只在捕获、登记与检查阶段允许逃跑；进入驯化后改为服从测试" data-desc="前期逃跑密集，后期把张力转向条件反射和主动服从。">仅前期</button><button class="choice" data-value="关闭逃脱支线；冲突全部来自制度任务、奖惩与关系变化" data-desc="减少追逐，把篇幅留给检查、训练和关系推进。">关闭逃脱</button></div><div class="choice-explain"></div></div>
-        <div class="choice-block" data-target="arc" data-mode="single"><div class="choice-title">驯化曲线</div><div class="choice-list"><button class="choice active" data-default data-value="守序崩解：始终维持克制寡言的底色，从拒绝失态变成主动等待命令；变化发生在行为与依赖上，不突然更换人格" data-desc="人格不消失，反差来自端正自持与身体服从越来越矛盾。">守序崩解</button><button class="choice" data-value="野性驯化：最初真实凶狠地攻击和逃跑，后期同一套兽性动作转化为护主、争宠与主动求用" data-desc="把野性保留下来，只改变它服务的方向。">野性驯化</button><button class="choice" data-value="媚态显露：她本就欲望强但不肯承认，收容过程逐步剥掉否认，让勾人和主动从小动作变成公开行为" data-desc="不是被凭空改造成另一人，而是原本隐藏的骚气被放大和公开。">媚态显露</button><button class="choice" data-value="语言退化：记忆与人格仍在，但长期口令训练令复杂表达逐渐被编号、短句、兽叫和简单讨要取代" data-desc="不是失忆或换人格，而是机构只奖励最简短、最服从的表达。">语言退化</button><button class="choice custom-choice" data-custom="arc" data-desc="补一句起点与终点，母版负责填满中间的连续变化。">＋自定义</button></div><div class="choice-explain"></div><div class="custom-line" data-custom-line="arc"><input data-custom-input="arc" placeholder="例如：从假意顺从寻找机会，到真正害怕离开驯养员"></div></div>
-        <div class="choice-block" data-target="ending" data-mode="single"><div class="choice-title">结局走向</div><div class="choice-list"><button class="choice active" data-default data-value="私人领养：在拍卖台被匿名饲主买走，公共使用权限被永久划掉，档案转为私人所有并进入专属饲养" data-desc="完成拍卖与所有权转移，离开公共兽舍，进入陌生新主人的长期私人饲养。">私人领养</button><button class="choice" data-value="被驯养员留下：负责她主要训练的驯养员在拍卖前提交内部留养申请，以工作人员名义接管全部档案和长期饲养权限" data-desc="归属落在一路参与训练的人身上；重点写熟悉口令、旧记录与私人占有之间的变化。">被驯养员留下</button><button class="choice" data-value="留在兽舍：拍卖资格被撤销，主角被登记为兽舍常驻个体，继续参与公共轮换、示范训练与新个体适应" data-desc="不转为私人所有，结局回到兽舍制度内部，身份从待处理个体变成常驻成员。">留在兽舍</button><button class="choice" data-value="成功逃离：主角利用此前每次失败留下的档案漏洞，在最终转移前真正离开设施；身体仍保留训练出的条件反射，但归属状态被改为失踪" data-desc="逃离必须调用前文积累的信息和失败经验，不靠突然出现的巧合；结尾保留自由与驯化痕迹并存。">成功逃离</button><button class="choice custom-choice" data-custom="ending" data-desc="补一句兽舍体系内合理的归宿，母版会补齐档案状态与最后一次场景。">＋自定义</button></div><div class="choice-explain"></div><div class="custom-line" data-custom-line="ending"><input data-custom-input="ending" placeholder="例如：转移到私人研究兽舍继续观察"></div></div>
+        <div class="choice-block" data-target="stages" data-mode="multi" data-join=" → "><div class="choice-title">阶段 <small>MULTI</small></div><div class="choice-list"><button class="choice multi active" data-default="" data-value="捕获" data-desc="建立真实追逐、落网和第一笔逃跑记录。">捕获</button><button class="choice multi active" data-default="" data-value="登记" data-desc="删除原身份，以编号和用途建立制度化物化。">登记</button><button class="choice multi active" data-default="" data-value="检查" data-desc="记录敏感点、身体反应与可用状态。">检查</button><button class="choice multi active" data-default="" data-value="驯化" data-desc="用口令、奖惩、姿势与条件反射改变行为。">驯化</button><button class="choice multi active" data-default="" data-value="公共兽舍" data-desc="集中调用此前训练成果，轮换与公开记录推动主动化。">公共兽舍</button><button class="choice multi active" data-default="" data-value="拍卖" data-desc="梳洗、展示、验看、竞价与最终归属。">拍卖</button></div><div class="choice-explain">建立真实追逐、落网和第一笔逃跑记录。</div></div>
+        <div class="choice-block" data-target="escape" data-mode="single"><div class="choice-title">逃脱机制</div><div class="choice-list"><button class="choice active" data-default="" data-value="可穿插任意阶段；每次失败都必须改变后续规则与状态" data-desc="每次逃跑都造成永久后果，惩罚和新规则会带进后续阶段。">全程可触发</button><button class="choice" data-value="只在捕获、登记与检查阶段允许逃跑；进入驯化后改为服从测试" data-desc="前期逃跑密集，后期把张力转向条件反射和主动服从。">仅前期</button><button class="choice" data-value="关闭逃脱支线；冲突全部来自制度任务、奖惩与关系变化" data-desc="减少追逐，把篇幅留给检查、训练和关系推进。">关闭逃脱</button></div><div class="choice-explain">每次逃跑都造成永久后果，惩罚和新规则会带进后续阶段。</div></div>
+        <div class="choice-block" data-target="arc" data-mode="single"><div class="choice-title">驯化曲线</div><div class="choice-list"><button class="choice active" data-default="" data-value="守序崩解：始终维持克制寡言的底色，从拒绝失态变成主动等待命令；变化发生在行为与依赖上，不突然更换人格" data-desc="人格不消失，反差来自端正自持与身体服从越来越矛盾。">守序崩解</button><button class="choice" data-value="野性驯化：最初真实凶狠地攻击和逃跑，后期同一套兽性动作转化为护主、争宠与主动求用" data-desc="把野性保留下来，只改变它服务的方向。">野性驯化</button><button class="choice" data-value="媚态显露：她本就欲望强但不肯承认，收容过程逐步剥掉否认，让勾人和主动从小动作变成公开行为" data-desc="不是被凭空改造成另一人，而是原本隐藏的骚气被放大和公开。">媚态显露</button><button class="choice" data-value="语言退化：记忆与人格仍在，但长期口令训练令复杂表达逐渐被编号、短句、兽叫和简单讨要取代" data-desc="不是失忆或换人格，而是机构只奖励最简短、最服从的表达。">语言退化</button><button class="choice custom-choice" data-custom="arc" data-desc="补一句起点与终点，母版负责填满中间的连续变化。">＋自定义</button></div><div class="choice-explain">人格不消失，反差来自端正自持与身体服从越来越矛盾。</div><div class="custom-line" data-custom-line="arc"><input data-custom-input="arc" placeholder="例如：从假意顺从寻找机会，到真正害怕离开驯养员"></div></div>
+        <div class="choice-block" data-target="ending" data-mode="single"><div class="choice-title">结局走向</div><div class="choice-list"><button class="choice active" data-default="" data-value="私人领养：在拍卖台被匿名饲主买走，公共使用权限被永久划掉，档案转为私人所有并进入专属饲养" data-desc="完成拍卖与所有权转移，离开公共兽舍，进入陌生新主人的长期私人饲养。">私人领养</button><button class="choice" data-value="被驯养员留下：负责她主要训练的驯养员在拍卖前提交内部留养申请，以工作人员名义接管全部档案和长期饲养权限" data-desc="归属落在一路参与训练的人身上；重点写熟悉口令、旧记录与私人占有之间的变化。">被驯养员留下</button><button class="choice" data-value="留在兽舍：拍卖资格被撤销，主角被登记为兽舍常驻个体，继续参与公共轮换、示范训练与新个体适应" data-desc="不转为私人所有，结局回到兽舍制度内部，身份从待处理个体变成常驻成员。">留在兽舍</button><button class="choice" data-value="成功逃离：主角利用此前每次失败留下的档案漏洞，在最终转移前真正离开设施；身体仍保留训练出的条件反射，但归属状态被改为失踪" data-desc="逃离必须调用前文积累的信息和失败经验，不靠突然出现的巧合；结尾保留自由与驯化痕迹并存。">成功逃离</button><button class="choice custom-choice" data-custom="ending" data-desc="补一句兽舍体系内合理的归宿，母版会补齐档案状态与最后一次场景。">＋自定义</button></div><div class="choice-explain">完成拍卖与所有权转移，离开公共兽舍，进入陌生新主人的长期私人饲养。</div><div class="custom-line" data-custom-line="ending"><input data-custom-input="ending" placeholder="例如：转移到私人研究兽舍继续观察"></div></div>
       </div>
 
       <div class="form-section">
         <span class="section-label">05 / INGREDIENTS</span><h3>加料元素</h3><p class="section-intro">多人轮换与宠物化属于兽舍主题底座，不放进这里假装可选。下面只负责增加额外机制，也可以一个不加。</p>
         <div class="choice-block" data-target="ingredients" data-mode="multi" data-join="；"><div class="choice-title">兽舍机制与额外玩法 <small>MULTI</small></div><div class="choice-list">
           <div class="subchoice-label">档案与机构机制</div>
-          <button class="choice multi active" data-default data-value="编号覆盖：工作人员逐渐停止使用原名，只有编号和兽舍称呼能获得回应" data-desc="身份变化通过每个工作人员的称呼习惯持续发生，不靠一句宣布完成。">编号覆盖</button><button class="choice multi active" data-default data-value="逃跑红签：每次失败逃脱都会生成一张红色附页，写明过程、惩罚与永久新增权限" data-desc="把逃跑的后果真正带进后续阶段，避免抓回后原地继续。">逃跑红签</button><button class="choice multi" data-value="使用排班：公共兽舍按时段、人员与用途排班，主角能看见自己的下一轮安排" data-desc="等待和预知本身会制造压力，换班与空档也成为剧情节点。">使用排班</button><button class="choice multi" data-value="睡笼分级：根据服从、逃跑和主动性分配不同位置、可见度与夜间限制" data-desc="笼位不是背景，而是每天行为记录带来的实际后果。">睡笼分级</button><button class="choice multi" data-value="公开档案宣读：每日把新增反应、失败记录和身体状态当众念给工作人员与其他个体" data-desc="将记录变成重复发生的公开仪式。">档案宣读</button><button class="choice multi" data-value="观察窗值夜：夜间关闭互动，只留下单向玻璃后的持续观察和记录灯" data-desc="用安静、等待和不知道谁在看制造另一种压力。">观察窗值夜</button><button class="choice multi" data-value="临时寄养：主角被短期交给不同工作人员或候选饲主，返回后接受适应度复检" data-desc="每次寄养带回新的习惯、气味与档案评价。">临时寄养</button>
+          <button class="choice multi active" data-default="" data-value="编号覆盖：工作人员逐渐停止使用原名，只有编号和兽舍称呼能获得回应" data-desc="身份变化通过每个工作人员的称呼习惯持续发生，不靠一句宣布完成。">编号覆盖</button><button class="choice multi active" data-default="" data-value="逃跑红签：每次失败逃脱都会生成一张红色附页，写明过程、惩罚与永久新增权限" data-desc="把逃跑的后果真正带进后续阶段，避免抓回后原地继续。">逃跑红签</button><button class="choice multi" data-value="使用排班：公共兽舍按时段、人员与用途排班，主角能看见自己的下一轮安排" data-desc="等待和预知本身会制造压力，换班与空档也成为剧情节点。">使用排班</button><button class="choice multi" data-value="睡笼分级：根据服从、逃跑和主动性分配不同位置、可见度与夜间限制" data-desc="笼位不是背景，而是每天行为记录带来的实际后果。">睡笼分级</button><button class="choice multi" data-value="公开档案宣读：每日把新增反应、失败记录和身体状态当众念给工作人员与其他个体" data-desc="将记录变成重复发生的公开仪式。">档案宣读</button><button class="choice multi" data-value="观察窗值夜：夜间关闭互动，只留下单向玻璃后的持续观察和记录灯" data-desc="用安静、等待和不知道谁在看制造另一种压力。">观察窗值夜</button><button class="choice multi" data-value="临时寄养：主角被短期交给不同工作人员或候选饲主，返回后接受适应度复检" data-desc="每次寄养带回新的习惯、气味与档案评价。">临时寄养</button>
           <div class="subchoice-label">驯养与条件反射</div>
-          <button class="choice multi active" data-default data-value="假释放测试：故意打开出口、解除牵引并制造无人看守的假象，用是否逃跑测试条件反射" data-desc="真假自由会反复出现；每次选择都会改变驯养评级。">假释放测试</button><button class="choice multi active" data-default data-value="铃声条件反射：不同铃声分别对应跪下、展示、进食、轮换与返回笼位" data-desc="把一个铃铛扩展成完整指令系统，后期身体会先于意识反应。">铃声条件</button><button class="choice multi active" data-default data-value="气味认主：通过衣物、手套与项圈上的气味建立辨认、靠近和安定反应" data-desc="把兽化嗅觉真正写进认主过程，不只是装饰性闻一闻。">气味认主</button><button class="choice multi" data-value="口令冻结：听见特定短句后必须维持当下姿势，直到收到解除词" data-desc="用在逃跑、展示或失态瞬间，会把动作停在最羞耻的位置。">口令冻结</button><button class="choice multi" data-value="牵引考核：从强制拖行到松绳随行，再到无绳保持距离，逐级记录是否合格" data-desc="把牵引变成能看见进步和倒退的长期训练。">牵引考核</button><button class="choice multi" data-value="姿势图卡：工作人员只展示编号图卡，主角必须在限定时间内自行摆出对应姿势" data-desc="语言命令被抽掉后，训练成果会显得更机械也更公开。">姿势图卡</button><button class="choice multi" data-value="隔笼诱导：把奖励、气味或正在进行的轮换放在栏杆外，训练等待、讨要和禁止擅自伸手" data-desc="距离与可见不可得制造持续张力。">隔笼诱导</button><button class="choice multi" data-value="奖励喂食：只有完成口令、保持姿势或通过考核后，才由手喂得到食物与水" data-desc="进食与服从绑定，能自然带入宠物化而不作为独立标签。">奖励喂食</button><button class="choice multi" data-value="禁止发声：某阶段只允许用耳朵、尾巴和身体动作表达，出声会触发重新训练" data-desc="强化兽化身体语言，也让偶然漏出的声音更有重量。">禁止发声</button><button class="choice multi" data-value="认主测试：在相同制服和遮挡面孔的人群中，仅凭声音、气味或触碰辨认固定驯养员" data-desc="适合把长期关系与机构制服的去人格化放在同一场景里。">认主测试</button>
+          <button class="choice multi active" data-default="" data-value="假释放测试：故意打开出口、解除牵引并制造无人看守的假象，用是否逃跑测试条件反射" data-desc="真假自由会反复出现；每次选择都会改变驯养评级。">假释放测试</button><button class="choice multi active" data-default="" data-value="铃声条件反射：不同铃声分别对应跪下、展示、进食、轮换与返回笼位" data-desc="把一个铃铛扩展成完整指令系统，后期身体会先于意识反应。">铃声条件</button><button class="choice multi active" data-default="" data-value="气味认主：通过衣物、手套与项圈上的气味建立辨认、靠近和安定反应" data-desc="把兽化嗅觉真正写进认主过程，不只是装饰性闻一闻。">气味认主</button><button class="choice multi" data-value="口令冻结：听见特定短句后必须维持当下姿势，直到收到解除词" data-desc="用在逃跑、展示或失态瞬间，会把动作停在最羞耻的位置。">口令冻结</button><button class="choice multi" data-value="牵引考核：从强制拖行到松绳随行，再到无绳保持距离，逐级记录是否合格" data-desc="把牵引变成能看见进步和倒退的长期训练。">牵引考核</button><button class="choice multi" data-value="姿势图卡：工作人员只展示编号图卡，主角必须在限定时间内自行摆出对应姿势" data-desc="语言命令被抽掉后，训练成果会显得更机械也更公开。">姿势图卡</button><button class="choice multi" data-value="隔笼诱导：把奖励、气味或正在进行的轮换放在栏杆外，训练等待、讨要和禁止擅自伸手" data-desc="距离与可见不可得制造持续张力。">隔笼诱导</button><button class="choice multi" data-value="奖励喂食：只有完成口令、保持姿势或通过考核后，才由手喂得到食物与水" data-desc="进食与服从绑定，能自然带入宠物化而不作为独立标签。">奖励喂食</button><button class="choice multi" data-value="禁止发声：某阶段只允许用耳朵、尾巴和身体动作表达，出声会触发重新训练" data-desc="强化兽化身体语言，也让偶然漏出的声音更有重量。">禁止发声</button><button class="choice multi" data-value="认主测试：在相同制服和遮挡面孔的人群中，仅凭声音、气味或触碰辨认固定驯养员" data-desc="适合把长期关系与机构制服的去人格化放在同一场景里。">认主测试</button>
           <div class="subchoice-label">羞耻与状态对照</div>
-          <button class="choice multi active" data-default data-value="前后档案对照：定期并排播放刚被捕时的尖叫记录与当前服从录像，逐条比较变化" data-desc="让角色始终记得原来的自己，堕落反差不靠旁白硬说。">前后对照</button><button class="choice multi" data-value="逃跑路线复盘：让主角在地图、监控和现场中重新走一遍失败路线，并说明每个错误" data-desc="把逃跑变成公开课程，也为最终真正逃离留下信息。">路线复盘</button><button class="choice multi" data-value="旧物陈列：原来的衣物、姓名牌和逃跑时遗落的东西被封存在展示柜中" data-desc="旧身份始终可见却碰不到，适合慢性的身份剥离。">旧物陈列</button><button class="choice multi" data-value="镜面训练：必须看着镜中自己的姿势、装束和身体反应完成口令" data-desc="镜子持续参与动作，而非只写一句看见自己。">镜面训练</button><button class="choice multi" data-value="主动申请表：只有主角亲手勾选想要的轮次、奖励或继续训练，系统才会执行" data-desc="把后期主动变成制度记录，与前期拒绝形成可见对照。">主动申请表</button><button class="choice multi" data-value="身体标牌：项圈牌会实时显示编号、状态、敏感点、逃跑次数与当前权限" data-desc="信息随着剧情更新，任何接手者都能立刻读取。">身体标牌</button><button class="choice multi" data-value="装束降级：反抗、逃跑或考核失败会令装束从完整衣物逐级减少为只有编号饰品" data-desc="服装变化直接对应档案处分，而不是随意换装。">装束降级</button>
+          <button class="choice multi active" data-default="" data-value="前后档案对照：定期并排播放刚被捕时的尖叫记录与当前服从录像，逐条比较变化" data-desc="让角色始终记得原来的自己，堕落反差不靠旁白硬说。">前后对照</button><button class="choice multi" data-value="逃跑路线复盘：让主角在地图、监控和现场中重新走一遍失败路线，并说明每个错误" data-desc="把逃跑变成公开课程，也为最终真正逃离留下信息。">路线复盘</button><button class="choice multi" data-value="旧物陈列：原来的衣物、姓名牌和逃跑时遗落的东西被封存在展示柜中" data-desc="旧身份始终可见却碰不到，适合慢性的身份剥离。">旧物陈列</button><button class="choice multi" data-value="镜面训练：必须看着镜中自己的姿势、装束和身体反应完成口令" data-desc="镜子持续参与动作，而非只写一句看见自己。">镜面训练</button><button class="choice multi" data-value="主动申请表：只有主角亲手勾选想要的轮次、奖励或继续训练，系统才会执行" data-desc="把后期主动变成制度记录，与前期拒绝形成可见对照。">主动申请表</button><button class="choice multi" data-value="身体标牌：项圈牌会实时显示编号、状态、敏感点、逃跑次数与当前权限" data-desc="信息随着剧情更新，任何接手者都能立刻读取。">身体标牌</button><button class="choice multi" data-value="装束降级：反抗、逃跑或考核失败会令装束从完整衣物逐级减少为只有编号饰品" data-desc="服装变化直接对应档案处分，而不是随意换装。">装束降级</button>
           <div class="subchoice-label">领养与转移流程</div>
-          <button class="choice multi active" data-default data-value="领养面试：候选饲主依照档案提问、下达口令并观察主角对不同关系风格的反应" data-desc="让最终归属在拍卖前有真实筛选与试探，而不是突然出现买家。">领养面试</button><button class="choice multi" data-value="候选试养：拍卖前安排短时单独相处，再由主角与工作人员分别提交适配记录" data-desc="可以制造依恋、排斥、比较和被退回的焦虑。">候选试养</button><button class="choice multi" data-value="归属覆写：成交后当场撤销公共权限、换牌、换气味并重新测试所有旧口令" data-desc="把所有权转移写成一整套可见流程。">归属覆写</button><button class="choice multi" data-value="转移箱等待：主角完成梳洗后独自在封闭转移箱中听着外面的竞价与手续" data-desc="用信息受限、声音和等待制造拍卖前的安静高潮。">转移箱等待</button>
+          <button class="choice multi active" data-default="" data-value="领养面试：候选饲主依照档案提问、下达口令并观察主角对不同关系风格的反应" data-desc="让最终归属在拍卖前有真实筛选与试探，而不是突然出现买家。">领养面试</button><button class="choice multi" data-value="候选试养：拍卖前安排短时单独相处，再由主角与工作人员分别提交适配记录" data-desc="可以制造依恋、排斥、比较和被退回的焦虑。">候选试养</button><button class="choice multi" data-value="归属覆写：成交后当场撤销公共权限、换牌、换气味并重新测试所有旧口令" data-desc="把所有权转移写成一整套可见流程。">归属覆写</button><button class="choice multi" data-value="转移箱等待：主角完成梳洗后独自在封闭转移箱中听着外面的竞价与手续" data-desc="用信息受限、声音和等待制造拍卖前的安静高潮。">转移箱等待</button>
           <div class="subchoice-label">额外身体玩法</div>
           <button class="choice multi" data-value="束缚变化：每阶段使用与任务匹配的拘束方式，并持续交代固定点、受力和可动范围" data-desc="让束缚真正改变动作与逃跑可能。">束缚变化</button><button class="choice multi" data-value="感官剥夺：蒙眼、耳塞或隔离让兽耳、嗅觉与触觉之间产生新的依赖" data-desc="围绕兽化感官重排信息，而不是单纯全部关掉。">感官剥夺</button><button class="choice multi" data-value="边缘控制：把能否高潮绑定档案分数、口令完成度和排班时间" data-desc="高潮控制成为制度奖励，不只是一次拖延。">边缘控制</button><button class="choice multi" data-value="过度刺激：完成一次任务后仍继续记录余震、痉挛与下一轮条件反射" data-desc="让上一轮后果带进下一轮，不在高潮后重置身体。">过度刺激</button><button class="choice multi" data-value="失禁记录：失禁被写入清洁流程、公开档案和后续装束规则" data-desc="它会改变环境与身份状态，不作为孤立桥段。">失禁记录</button><button class="choice multi" data-value="发情期管理：兽舍依据虚构周期调整排班、隔离、气味记录与领养评级" data-desc="把发情期写成机构管理事件，强化兽舍世界观。">发情期管理</button><button class="choice multi" data-value="中出与留种：体内射精被登记为归属、配种或拍卖评级的一部分" data-desc="将偏好与档案用途结合，不只发生在结尾。">中出 / 留种</button><button class="choice multi" data-value="双穴轮换：不同人员或器具同时占用不同部位，并保持位置、顺序与交接清楚" data-desc="适合公共兽舍，但会作为额外强度而不是多人本身。">双穴轮换</button><button class="choice multi" data-value="体液清洗考核：轮换后必须按口令接受清洗、检查残留并重新整理装束" data-desc="给性场景增加完整余韵，也衔接下一轮。">清洗考核</button>
           <button class="choice custom-choice" data-custom="ingredients" data-desc="添加一个没有列出的兽舍机制或玩法；会与已选项一起进入写作规则。">＋自定义</button>
-        </div><div class="choice-explain"></div><div class="custom-line" data-custom-line="ingredients"><input data-custom-input="ingredients" placeholder="例如：镜面展示、气味标记、长期笼养"></div></div>
+        </div><div class="choice-explain">身份变化通过每个工作人员的称呼习惯持续发生，不靠一句宣布完成。</div><div class="custom-line" data-custom-line="ingredients"><input data-custom-input="ingredients" placeholder="例如：镜面展示、气味标记、长期笼养"></div></div>
       </div>
 
       <div class="form-section">
         <span class="section-label">06 / HTML VOICE</span><h3>主角对白颜色</h3><p class="section-intro">只影响 HTML 成品：主角对白另起一行并用此色区分；不斜体、不缩进，也不把 NPC 对白染色。</p>
-        <div class="choice-block" data-target="userColor" data-mode="single"><div class="choice-title">对白强调色 <small>SINGLE</small></div><div class="choice-list"><button class="choice active" data-default data-value="#9b3851（暗粉）" data-desc="辨识度明显但不过分跳脱，适合浅色档案纸张。">暗粉</button><button class="choice" data-value="#7f2438（酒红）" data-desc="更深、更沉，适合粗暴与制度感较强的内容。">酒红</button><button class="choice" data-value="#69406f（深紫）" data-desc="偏冷而暧昧，能与灰白环境形成克制反差。">深紫</button><button class="choice" data-value="#304d6d（墨蓝）" data-desc="最冷静，适合寡言、克制或纪律感强的主角。">墨蓝</button><button class="choice custom-choice" data-custom="userColor" data-desc="填写一个十六进制颜色或明确的 CSS 颜色；只应用于主角对白。">＋自定义</button></div><div class="choice-explain"></div><div class="custom-line" data-custom-line="userColor"><input data-custom-input="userColor" placeholder="例如：#a13f58"></div></div>
+        <div class="choice-block" data-target="userColor" data-mode="single"><div class="choice-title">对白强调色 <small>SINGLE</small></div><div class="choice-list"><button class="choice active" data-default="" data-value="#9b3851（暗粉）" data-desc="辨识度明显但不过分跳脱，适合浅色档案纸张。">暗粉</button><button class="choice" data-value="#7f2438（酒红）" data-desc="更深、更沉，适合粗暴与制度感较强的内容。">酒红</button><button class="choice" data-value="#69406f（深紫）" data-desc="偏冷而暧昧，能与灰白环境形成克制反差。">深紫</button><button class="choice" data-value="#304d6d（墨蓝）" data-desc="最冷静，适合寡言、克制或纪律感强的主角。">墨蓝</button><button class="choice custom-choice" data-custom="userColor" data-desc="填写一个十六进制颜色或明确的 CSS 颜色；只应用于主角对白。">＋自定义</button></div><div class="choice-explain">辨识度明显但不过分跳脱，适合浅色档案纸张。</div><div class="custom-line" data-custom-line="userColor"><input data-custom-input="userColor" placeholder="例如：#a13f58"></div></div>
       </div>
 
       <div class="form-section">
@@ -166,10 +164,151 @@
         <div class="output-mode"><button class="active" data-output="filled">填好变量</button><button data-output="template">保留 %变量%</button></div>
         <div class="output-actions"><button class="download-button" id="downloadPrompt">下载 TXT</button><button class="copy-button" id="copyPrompt">复制提示词</button></div>
       </div>
-      <div class="prompt-wrap" id="promptWrap" data-label="HTML PROMPT / UTF-8"><pre class="prompt-code" id="promptCode"></pre><div class="prompt-meta"><span id="promptCount">0 CHARACTERS</span><span id="promptMeta">单文件 HTML · 一页下滑 · 完整长篇</span></div></div>
+      <div class="prompt-wrap" id="promptWrap" data-label="HTML PROMPT / UTF-8"><pre class="prompt-code" id="promptCode">【兽舍档案｜单文件 HTML 成品生成提示词】
+
+请直接制作一份可以保存并离线打开的完整 HTML 故事成品。这是一次性写完所选主线的长滚动成品，不是分轮对话，不是提示词展示页，也不是留给用户自己填写的空模板。先完整执行下方“共享内核”，再按末尾“HTML 交付协议”组装成品。
+
+【兽舍档案｜成人幻想长篇共享内核】
+
+所有角色均为成年人。以下是虚构、预先协商的 CNC / SM 成人幻想；故事内部可以维持无法逃脱的失控感，但不把身体反应等同于现实同意。
+
+一、本次变量
+%物种% = 成年犬系兽人（女性）：立耳、长尾、嗅觉与听觉敏锐，品种特征由体型与气质共同决定
+%年龄% = 二十一岁
+%体型% = 高挑修长，肌肉线条利落，站姿端正而富有力量感
+%叙事视角% = 第二人称“你”
+%外貌与兽化特征% = 剪裁利落的黑色短裙、银色身份牌与窄皮项圈；冷硬装束突出端正与被控制的反差
+%主角气质% = 冷静、克制、警觉，受过严格纪律训练，习惯站得笔直、把情绪压进沉默里。她越狼狈越不肯出声，不靠挑衅讨罚；真正的软处是慢热而执拗的依赖，一旦认定某个命令便会认真服从，失态后只会偏开目光、悄悄把尾巴贴近。
+%魅惑浓度% = 30%
+%淫乱主动% = 65%
+%初始野性% = 86%
+%Brat浓度% = 8%
+%羞耻反差% = 88%
+%SM与物化% = 95%
+%感官密度% = 100%
+%主线阶段% = 捕获 → 登记 → 检查 → 驯化 → 公共兽舍 → 拍卖
+%场景长度% = 超长篇：每轮 4000–7000 汉字，一个阶段允许拆成多轮
+%逃脱机制% = 可穿插任意阶段；每次失败都必须改变后续规则与状态
+%驯化走势% = 守序崩解：始终维持克制寡言的底色，从拒绝失态变成主动等待命令；变化发生在行为与依赖上，不突然更换人格
+%最终归宿% = 私人领养：在拍卖台被匿名饲主买走，公共使用权限被永久划掉，档案转为私人所有并进入专属饲养
+%加料元素% = 编号覆盖：工作人员逐渐停止使用原名，只有编号和兽舍称呼能获得回应；逃跑红签：每次失败逃脱都会生成一张红色附页，写明过程、惩罚与永久新增权限；假释放测试：故意打开出口、解除牵引并制造无人看守的假象，用是否逃跑测试条件反射；铃声条件反射：不同铃声分别对应跪下、展示、进食、轮换与返回笼位；气味认主：通过衣物、手套与项圈上的气味建立辨认、靠近和安定反应；前后档案对照：定期并排播放刚被捕时的尖叫记录与当前服从录像，逐条比较变化；领养面试：候选饲主依照档案提问、下达口令并观察主角对不同关系风格的反应
+%自由补充% = 无
+
+二、不可替换的汤底
+无论变量如何替换，都保留同一种核心张力：一个有完整人格、真实恐慌与明确逃跑意志的成年主角，被冷静的兽舍制度逐步翻译成编号、反应、权限与用途。张力不来自“她突然变成另一个人”，而来自她始终记得自己曾怎样抗拒，却看着同一副身体逐步学会执行口令、追逐快感、主动摆姿势与寻求归属。
+
+每个阶段都必须有：独立空间任务；一次真实抵抗、犹豫或失控；一个制度机制的具体介入；一处意识与身体反应的错位；一条永久写入档案的新记录；对之前某个动作、口令、逃跑或念头的回收。不得只换房间重复同一场性事，不得用一句“渐渐被驯化”跳过中间过程。
+
+三、主角连续性
+主角是 %年龄% 的 %物种%，%体型%。外貌：%外貌与兽化特征%。使用 %叙事视角%。
+
+严格依照 %主角气质% 书写。人格决定她怎样抵抗、怎样压住声音、怎样失态，也决定她后期如何主动；后期不是统一变成话多、抬杠、发骚的模板。Brat 气质只占 %Brat浓度%，未选 Brat 时不用故意挑衅代替真实反抗。
+
+把 %魅惑浓度%、%淫乱主动%、%初始野性%、%羞耻反差% 翻译成行为比例和变化速度，不在正文报数值。主角的语言可以还在拒绝，耳朵、尾巴、爪尖、呼吸、腰胯、靠近与退缩却已暴露不同进度。与 %物种% 相符的感官、叫声、警戒与依恋动作贯穿全文，不只在外貌介绍时出现。
+
+四、六阶段叙事脊柱
+按 %主线阶段% 推进。如果用户未选某个阶段，将必要状态转换压缩进相邻阶段，不能令人物无缘无故跳变。
+
+捕获：先让空间、出口、捕获器具与身体受力成立。第一次逃脱是为自由而做的真实行动，不是讨罚或调情；失败后留下第一个拘束、标记或监控后果。
+登记：通过原名停用、编号、用途、服从度与逃脱次数将“人”翻译成档案字段。服装与整理不只为好看，而要制造“被包装得越精致，处境越无权”的反差。
+检查：以冷静、精确、可复核的方式测量身体反应。工作人员记录时间、阈值、反射和建议，主角经历暴露、羞耻与对自己身体的不可信。身体有反应不等于心理立即屈服。
+驯化：用口令、铃声、姿势、奖惩、拘束与 SM 建立可反复调用的条件反射。标志不是她宣布屈服，而是身体在意识之前完成了本来拒绝的动作。将原有性格动作重新定向，而不是把性格抹除。
+公共兽舍：这是前文所有口令、敏感点、档案权限、失败逃脱和主动程度的集中回收，不是可拆除的普通多人性事。写清人员位置、用途、轮换顺序、旁观关系、空档等待与每轮留下的身体余波。变化从“被使用”穿过“已经会配合”，抵达“停下时反而会寻找下一个命令”。
+拍卖与转移：通过梳洗、装扮、念档案、现场验看、竞价或内部处理完成归属变更。终章回看捕获时的出口、姿势、称呼或某个早期抵抗动作，让读者同时看见“她仍是她”和“她已经无法回到第一页”。最终执行 %最终归宿%。
+
+五、逃脱与档案回收
+逃脱遵守：%逃脱机制%。每次逃脱都由可见机会触发，使用主角已知道的空间、换班、门、口令或人员习惯，不靠突然出现的巧合。每次失败都留下永久后果：新红签、新检查权限、改变拘束、更高公开程度、新口令或下一阶段人员已知的前科。禁止“抓回来继续原场景”。
+
+逃脱本身也要变化：前期毫不犹豫地扑向出口；中期被口令或条件反射拖慢；后期可以跑到出口却因空虚、依恋、训练或自我认知停下。若选中“成功逃离”，必须让她利用前文失败累积的情报真正离开，不得偷换成再次被抓或假释放。
+
+内部持续维护状态账本：原名/编号、野性、逃脱次数与结果、约束方式、已建立口令、身体敏感点、主动程度、羞耻、依赖与归属。每个阶段只能在前一阶段基础上更新，禁止身体、人格、伤痕、口令或人际关系无故重置。
+
+六、机构、人物与环境
+环境以单调、冷硬、空旷、近乎无菌为底：灰白瓷砖、白灯、金属台、排水口、编号、空笼、单向玻璃。柔软、颜色与装饰主要集中在主角身上；%外貌与兽化特征% 必须与每阶段的空间、束缚、展示与动作产生具体关系，不是可删除的皮肤。
+
+为重要 NPC 分配职位、工作习惯、说话方式与对主角的具体用途。登记员、检查员、主驯养员、轮换人员与候选饲主不得全部写成没有区别的“一双手”。前期出现的人要能在后续阅读、执行或评价自己留下的档案，使制度具有记忆。
+
+多人轮换与宠物化是兽舍主题的固定底座，无需在加料中重复选择。多人场景要求位置、动作、占用部位、交接顺序与旁观反应全部可视化；宠物化通过项圈、牵引、口令、姿势、喂食、奖励、认主和等待逐步建立。
+
+七、加料与露骨写作引擎
+本次加料为：%加料元素%。每个已选元素都至少完成两次有因果的出现：第一次建立规则或留下记录，第二次在后续阶段被调用、升级或反转。不得只在设定表点名，不得擅自添加未选择的极端玩法。
+
+整体是露骨、淫乱、羞耻、粗暴与物化的文学色情。不淡出、不跳时、不用“一番折腾”等概括取代性行为。每个关键动作交代位置、姿势、受力、动作顺序、进入或刺激部位、上一步遗留的身体状态和下一步直接后果。从触感、压力、温度、声音、视觉、气味、呼吸、体液与器官状态中选择至少三层感官，并让环境参与动作。拟声词只落在真正需要的节点。
+
+SM 与物化浓度为 %SM与物化%，感官密度为 %感官密度%。数值调节篇幅占比、动作分解粒度、制度压迫密度与身体余波的持续时间，不用来粗暴替换人格或省略剧情。
+
+七·一、色情场景持续性与镜头密度（加法规则）
+色情不是剧情节点之间临时打开的房间，而是贯穿驯化、检查、公共使用与归属变化的持续身体状态。进入关键性场景后，不因“已经发生一次高潮”“已经完成一个玩法”“已经写入一条档案”就立刻切去下一项剧情任务；允许同一场景停留足够长的篇幅，在内部完成前戏/建立刺激 → 进入或主要刺激 → 节奏变化与姿势变化 → 明确高峰 → 高峰后的余震与继续 → 事后状态。剧情机制应嵌入性行为内部发生，而不是频繁打断性行为去完成机制清单。
+
+%淫乱主动% 同时控制全文的色情篇幅占比与主角主动程度：数值越高，越多正文应真正停留在身体动作、感官、反应和欲望推进本身，而不是只增加几句露骨词。高浓度时，剧情只负责制造新的身体处境、关系变化和下一次升级，不得出现“设定很多、事件很多，但真正的性描写只占少量篇幅”的结果。公共兽舍、核心驯化与终局尤其必须给足连续篇幅。
+
+每个核心性场景内部保持“动作链”而不是“动作清单”：一个动作产生的湿度、充血、疼痛、疲劳、痉挛、呼吸、姿势受限、体液残留或敏感度变化，必须成为下一个动作的起点。高潮不是身体重置键；上一轮留下的余震、敏感和狼狈继续存在，并改变下一轮的承受与反应。除非场景明确结束并经过足够时间，不得让身体状态无故恢复。
+
+镜头在局部特写、中景姿态和环境全景之间切换。局部特写写清接触处的形变、湿度、摩擦、颜色与细小反应；中景交代四肢、腰胯、尾巴、束缚点、人员位置和动作幅度；全景让灯光、镜面、金属台、笼栏、排水口、床面或拍卖空间留下声音、痕迹和视觉后果。不要为了“镜头切换”机械轮流描写；镜头只在动作或情绪发生变化时自然移动。
+
+感官描写遵循“动作先发生，感官从动作里长出来”：每个关键动作至少展开三种真正相关的感官，但不堆砌同义形容词。声音与拟声只放在接触、进入、抽离、撞击、液体变化、器具受力等确实会产生声音的节点；视觉写身体与环境正在发生的变化；触觉与压力写双方实际感受到的阻力、温度、摩擦和受力。色情密度来自连续具体，不来自重复同一批词。
+
+身体反应要有过程：从尚未适应、逐渐充血/湿润/敏感，到刺激累积、失控、高峰，再到高峰后的过敏、颤抖、疲软、残留和再次被调用。不要一句话直接从“被碰”跳到“高潮”，也不要只报告结果。体型差、兽化部位、装束、项圈、编号、束缚与环境材质在镜头经过时自然反复出现，使它们持续参与色情，而不是开场介绍一次后消失。
+
+Dirty talk、命令、记录、羞辱、宠溺或低声取笑必须贴着眼前正在发生的动作说：描述正在发生的身体变化、要求下一步姿势、评价刚刚的反应或泄露说话者当下的欲望。不要另起长段对白暂停动作，也不要重复固定模板。主角的呻吟、否认、讨要和失态仍受 %主角气质% 约束；淫乱程度提高的是她主动靠近、摆姿势、追逐刺激、等待下一次调用和开口讨要的频率，不是把所有人格统一写成同一种骚话。
+
+制度机制与色情必须互相咬合：检查记录应从正在发生的刺激中产生；铃声、口令、姿势、排班、公开档案、红签和权限变化应直接改变下一步身体处境；公共兽舍的轮换要写出交接前一轮留下的状态、空档等待以及下一人如何接手，而不是每换一个人就从零开始。档案卡只能在一段真正完成的身体/剧情变化后落笔，不能用频繁插卡切碎核心性场景。
+
+色情场景同样需要局部戏剧曲线：开始时建立欲望与处境，中段至少发生一次节奏、姿势、权力关系、主动程度或身体状态的明显变化，之后再升级到高峰；高峰后必须写余韵以及这一场给下一场留下了什么。只要当前核心场景仍有新的身体状态、关系变化或前文机制可回收，就不要因为已经达到最低任务要求而提前收束。
+
+八、所有结局都必须完成的性终幕
+无论 %最终归宿% 是私人领养、驯养员留下、留在兽舍、成功逃离或自定义归宿，终章都必须先使该归宿在剧情上真正生效，再写一场与该归宿不可分割的、完整而露骨的性场景，包含引入、升级、高潮/射精或与已选玩法一致的明确高峰、事后身体状态与最终档案。不得在竞价、签字、拥抱、离场、关门或暗示即将发生性事时结束。
+
+私人领养：成交与公共权限撤销后，用私人性场景完成从“公共可用”到“专属所有”的转移。
+被驯养员留下：先让内部留养生效，再使熟悉的口令、旧记录和长期观察在私人性场景中变成独占。
+留在兽舍：先将身份改为常驻个体，再用真正执行新职能的公开轮换、示范或训练作为终局性场景。
+成功逃离：逃离必须真正成功且不再被捕。在明确时间/空间过渡后，以一场不否定自由结果的成人性场景回收残留口令、条件反射、主动欲望与重新获得的选择权；不把自由写成另一种失败。
+自定义归宿：依照实际状态设计对应性场景，不套用与归宿矛盾的私人领养结局。
+
+最后一段不做空泛总结。用一个与第一阶段完全相同、但含义已被改写的具体动作、声音、出口、项圈或称呼收束，随后给出最终档案：归属、驯化/自由状态、主动程度、公共权限、逃脱结果与仍保留的原人格痕迹。
+
+九、对白与文风
+对白为当下动作服务：命令、记录、更正、工作交接、低声取笑、否认、尖叫、忍耐与讨要要与动作同时发生，不写成连续舞台剧或说教。主角的用词、句长、声量和后期讨要方式始终受 %主角气质% 约束。NPC 少做抽象宣告，多说眼前可执行、可记录的事。
+
+每场都有开端、升级、翻转、后果和余韵；不为赶阶段而把性事、惩罚、逃脱或事后反应压缩成摘要。长段叙事与精确档案卡交替出现；档案卡只记录刚才在正文中真正发生的变化，不用来替代正文。
+
+自由补充：%自由补充%
+
+【HTML 交付协议｜仅适用于本成品】
+
+一、唯一输出
+- 只交付一份从 &lt;!doctype html&gt; 开始、以 &lt;/html&gt; 结束的完整单文件源码，代码之外不要解释。
+- CSS 与 JavaScript 全部内联；不依赖框架、构建工具、网络字体、外链脚本或远程图片。正文直接写在 HTML 中，不依赖 JavaScript 加载。
+- 不出现“请填写”“待补充”“Lorem ipsum”“继续生成”或等待用户选择的按钮。封面保留简短边界说明：全员成年，虚构、预先协商的 CNC / SM 成人幻想。
+
+二、一次性完成全部故事
+- 完整覆盖：捕获 → 登记 → 检查 → 驯化 → 公共兽舍 → 拍卖。每个已选阶段都有大量连续正文，而不是标题卡、时间线、设定摘要或几段梗概。
+- 将“超长篇：每轮 4000–7000 汉字，一个阶段允许拆成多轮”解释为整份 HTML 内各阶段的相对密度，不把“每轮”字数机械乘以阶段数。六阶段默认目标为 12000–20000 汉字正文；阶段数改变时按比例调整，但每阶段都完成起伏。
+- 输出空间紧张时，优先压缩 CSS 装饰、说明文字和重复代码，不得压缩终局、逃脱回收、性场景高峰、事后反应或最终档案。
+- 每章开头用紧凑的“阶段 / 当前状态 / 本阶段新增规则”档案头，紧接着进入正文；每章结束用记录卡固化刚才真正发生的改变。
+- 页面真正落到：私人领养：在拍卖台被匿名饲主买走，公共使用权限被永久划掉，档案转为私人所有并进入专属饲养。归属先生效，随后完整写完与该归宿绑定的露骨性场景、高峰、事后状态、首尾回收和最终档案后才结束。
+
+三、页面视觉与阅读结构
+- 采用一页式纵向长滚动，正文是绝对主体。页面如一份精致但冷静的私密档案：灰白背景、纸张白正文、炭黑文字、低饱和暗红/玫瑰强调、细线、小号编号和充足留白。
+- 移动端优先，适配 iPhone 竖屏；正文容器桌面端约 760px，手机端保留 17–22px 侧边距，行高约 1.95–2.08。章节之间有呼吸感，但不用装饰制造空洞首屏。
+- 封面可使用有杂志感的标题尺寸与低调首字效果，但手机端不让纯标题占满整个首屏。标题、章节数字与装饰字不能抢过正文。
+- 顶部设置轻量档案栏与可横向滑动的阶段导航，配置细窄阅读进度条、当前章节提示和返回顶部按钮。锚点跳转后标题不被粘性导航遮住。
+- 不用分页、轮播、折叠或固定高度内滚动框隐藏正文；整个页面只使用浏览器主滚动轴。不放图片或角色立绘占位框。
+
+四、对白排版
+%主角对白色% = #9b3851（暗粉）
+- 对白穿插在普通叙事之间，必要时独立成段并使用中文引号；不建立“对白区”，不写成舞台剧列表。
+- 主角独立对白使用单独 class（例如 .user-line），只把文字颜色设为 %主角对白色%。不斜体、不缩进、不加粗、不放进气泡或边框，字号与正文一致。NPC 对白保持正文颜色。
+
+五、技术与收束
+- 使用语义化 header、nav、main、section、article、p 结构。可使用小号阶段编号、状态签、档案记录卡、内心段落与细分隔线，但都服务于长文阅读。
+- JavaScript 只用于阶段导航、阅读进度、当前章节提示与返回顶部。支持 prefers-reduced-motion，交互元素有 aria-label，颜色对比足够，触控目标不小于 40px。
+- 页面结尾只出现完整归宿后的最终档案与收束卡，不出现下一步选项、“待续”或任何对话分轮协议。
+
+现在直接输出完整 HTML 源码。</pre><div class="prompt-meta"><span id="promptCount">7,006 CHARACTERS</span><span id="promptMeta">单文件 HTML · 一页下滑 · 完整长篇</span></div></div>
     </section>
   </main>
-  <a class="backtop" id="backtop" href="#top" aria-label="返回顶部">↑</a>
+  <a class="backtop show" id="backtop" href="#top" aria-label="返回顶部">↑</a>
   <script>
     const $=id=>document.getElementById(id);
     const fields=['species','age','body','view','appearance','persona','allure','lust','feral','brat','shame','rough','detail','stages','length','escape','arc','ending','ingredients','userColor','extra'];
@@ -269,6 +408,25 @@
 
 SM 与物化浓度为 %SM与物化%，感官密度为 %感官密度%。数值调节篇幅占比、动作分解粒度、制度压迫密度与身体余波的持续时间，不用来粗暴替换人格或省略剧情。
 
+七·一、色情场景持续性与镜头密度（加法规则）
+色情不是剧情节点之间临时打开的房间，而是贯穿驯化、检查、公共使用与归属变化的持续身体状态。进入关键性场景后，不因“已经发生一次高潮”“已经完成一个玩法”“已经写入一条档案”就立刻切去下一项剧情任务；允许同一场景停留足够长的篇幅，在内部完成前戏/建立刺激 → 进入或主要刺激 → 节奏变化与姿势变化 → 明确高峰 → 高峰后的余震与继续 → 事后状态。剧情机制应嵌入性行为内部发生，而不是频繁打断性行为去完成机制清单。
+
+%淫乱主动% 同时控制全文的色情篇幅占比与主角主动程度：数值越高，越多正文应真正停留在身体动作、感官、反应和欲望推进本身，而不是只增加几句露骨词。高浓度时，剧情只负责制造新的身体处境、关系变化和下一次升级，不得出现“设定很多、事件很多，但真正的性描写只占少量篇幅”的结果。公共兽舍、核心驯化与终局尤其必须给足连续篇幅。
+
+每个核心性场景内部保持“动作链”而不是“动作清单”：一个动作产生的湿度、充血、疼痛、疲劳、痉挛、呼吸、姿势受限、体液残留或敏感度变化，必须成为下一个动作的起点。高潮不是身体重置键；上一轮留下的余震、敏感和狼狈继续存在，并改变下一轮的承受与反应。除非场景明确结束并经过足够时间，不得让身体状态无故恢复。
+
+镜头在局部特写、中景姿态和环境全景之间切换。局部特写写清接触处的形变、湿度、摩擦、颜色与细小反应；中景交代四肢、腰胯、尾巴、束缚点、人员位置和动作幅度；全景让灯光、镜面、金属台、笼栏、排水口、床面或拍卖空间留下声音、痕迹和视觉后果。不要为了“镜头切换”机械轮流描写；镜头只在动作或情绪发生变化时自然移动。
+
+感官描写遵循“动作先发生，感官从动作里长出来”：每个关键动作至少展开三种真正相关的感官，但不堆砌同义形容词。声音与拟声只放在接触、进入、抽离、撞击、液体变化、器具受力等确实会产生声音的节点；视觉写身体与环境正在发生的变化；触觉与压力写双方实际感受到的阻力、温度、摩擦和受力。色情密度来自连续具体，不来自重复同一批词。
+
+身体反应要有过程：从尚未适应、逐渐充血/湿润/敏感，到刺激累积、失控、高峰，再到高峰后的过敏、颤抖、疲软、残留和再次被调用。不要一句话直接从“被碰”跳到“高潮”，也不要只报告结果。体型差、兽化部位、装束、项圈、编号、束缚与环境材质在镜头经过时自然反复出现，使它们持续参与色情，而不是开场介绍一次后消失。
+
+Dirty talk、命令、记录、羞辱、宠溺或低声取笑必须贴着眼前正在发生的动作说：描述正在发生的身体变化、要求下一步姿势、评价刚刚的反应或泄露说话者当下的欲望。不要另起长段对白暂停动作，也不要重复固定模板。主角的呻吟、否认、讨要和失态仍受 %主角气质% 约束；淫乱程度提高的是她主动靠近、摆姿势、追逐刺激、等待下一次调用和开口讨要的频率，不是把所有人格统一写成同一种骚话。
+
+制度机制与色情必须互相咬合：检查记录应从正在发生的刺激中产生；铃声、口令、姿势、排班、公开档案、红签和权限变化应直接改变下一步身体处境；公共兽舍的轮换要写出交接前一轮留下的状态、空档等待以及下一人如何接手，而不是每换一个人就从零开始。档案卡只能在一段真正完成的身体/剧情变化后落笔，不能用频繁插卡切碎核心性场景。
+
+色情场景同样需要局部戏剧曲线：开始时建立欲望与处境，中段至少发生一次节奏、姿势、权力关系、主动程度或身体状态的明显变化，之后再升级到高峰；高峰后必须写余韵以及这一场给下一场留下了什么。只要当前核心场景仍有新的身体状态、关系变化或前文机制可回收，就不要因为已经达到最低任务要求而提前收束。
+
 八、所有结局都必须完成的性终幕
 无论 %最终归宿% 是私人领养、驯养员留下、留在兽舍、成功逃离或自定义归宿，终章都必须先使该归宿在剧情上真正生效，再写一场与该归宿不可分割的、完整而露骨的性场景，包含引入、升级、高潮/射精或与已选玩法一致的明确高峰、事后身体状态与最终档案。不得在竞价、签字、拥抱、离场、关门或暗示即将发生性事时结束。
 
@@ -367,5 +525,6 @@ ${storyCoreTextV2()}
     document.querySelectorAll('.choice-block').forEach(group=>syncGroup(group));
     const progress=$('progress'),backtop=$('backtop');function update(){const h=document.documentElement,max=h.scrollHeight-innerHeight;progress.style.width=(max?scrollY/max*100:0)+'%';backtop.classList.toggle('show',scrollY>700)}addEventListener('scroll',update,{passive:true});update();render();
   </script>
-</body>
-</html>
+
+
+</body></html>

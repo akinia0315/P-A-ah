@@ -1,0 +1,358 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+  <meta name="theme-color" content="#ece7e4">
+  <title>兽舍档案｜提示词母版</title>
+  <style>
+    :root{--ink:#251f21;--soft:#75696c;--faint:#a89da0;--line:#d8ced0;--paper:#fffdfb;--rose:#94384f;--rose2:#c97d8e;--wash:#f4e7e9;--bg:#e9e4e1;--shadow:0 22px 70px rgba(55,38,42,.1)}
+    *{box-sizing:border-box}html{scroll-behavior:smooth;background:var(--bg)}body{margin:0;color:var(--ink);background:radial-gradient(circle at 50% -18rem,#fff 0,transparent 45rem),linear-gradient(180deg,#efeae7,#e6e0dd);font-family:"Noto Serif SC","Songti SC","STSong",Georgia,serif;line-height:1.8}button,input,select,textarea{font:inherit}button{cursor:pointer}::selection{color:#fff;background:var(--rose)}
+    .progress{position:fixed;z-index:70;top:0;left:0;width:0;height:3px;background:linear-gradient(90deg,var(--rose2),var(--rose))}.top{position:sticky;z-index:40;top:0;padding-top:env(safe-area-inset-top);border-bottom:1px solid rgba(65,51,55,.12);background:rgba(239,234,231,.9);backdrop-filter:blur(18px)}.top-inner{display:flex;align-items:center;justify-content:space-between;width:min(1040px,calc(100% - 34px));height:58px;margin:auto}.brand{display:flex;align-items:center;gap:12px}.mark{display:grid;place-items:center;width:34px;height:34px;border:1px solid #493b3e;border-radius:50%;color:var(--rose);font-size:13px}.brand small,.adult{font:8px ui-monospace,SFMono-Regular,Menlo,monospace;letter-spacing:.2em}.brand strong{display:block;font-size:15px;letter-spacing:.08em}.brand small{color:var(--faint)}.adult{color:#8e8285}
+    main{width:min(1040px,calc(100% - 34px));margin:auto;padding:76px 0 110px}.hero{max-width:760px;margin:0 0 52px}.eyebrow{margin:0 0 12px;color:var(--rose);font:9px ui-monospace,SFMono-Regular,Menlo,monospace;letter-spacing:.27em}.hero h1{margin:0;font-size:clamp(26px,4.4vw,46px);font-weight:550;line-height:1.14;letter-spacing:-.025em}.hero h1 em{color:var(--rose);font-style:normal}.hero>p{max-width:660px;margin:23px 0 0;color:#66595c;font-size:clamp(15px,2vw,18px);line-height:2}.hero-note{display:inline-flex;align-items:center;gap:10px;margin-top:22px;color:#85777a;font-size:10px}.hero-note:before{content:"";width:30px;height:1px;background:var(--rose2)}button{touch-action:manipulation;transition:transform .12s ease,filter .18s ease}button:active{transform:translateY(1px);filter:brightness(.96)}
+    .prompt-kind{display:grid;grid-template-columns:1fr 1fr;gap:10px;margin-bottom:12px}.prompt-kind button{display:flex;align-items:flex-start;flex-direction:column;min-height:84px;padding:17px 18px;border:1px solid var(--line);border-radius:13px;color:#75696c;background:rgba(255,253,251,.66);text-align:left}.prompt-kind button strong{color:#403438;font-size:13px;font-weight:650;letter-spacing:.04em}.prompt-kind button small{margin-top:4px;color:#97898d;font-size:9px;line-height:1.7}.prompt-kind button.active{border-color:var(--rose);background:#30272a;box-shadow:0 10px 25px rgba(48,39,42,.14)}.prompt-kind button.active strong{color:#fff}.prompt-kind button.active small{color:#cdbfc2}.mode-switch{display:grid;grid-template-columns:1fr 1fr;gap:8px;margin-bottom:18px;padding:6px;border:1px solid var(--line);border-radius:14px;background:rgba(255,253,251,.58)}.mode-switch button{padding:14px;border:0;border-radius:9px;color:#776a6d;background:transparent;font-size:12px;letter-spacing:.08em}.mode-switch button.active{color:#fff;background:#30272a;box-shadow:0 7px 18px rgba(48,39,42,.16)}
+    .panel{overflow:hidden;margin-bottom:24px;border:1px solid var(--line);border-radius:18px;background:rgba(255,253,251,.86);box-shadow:var(--shadow)}.panel-head{display:flex;align-items:flex-start;justify-content:space-between;gap:20px;padding:26px 28px;border-bottom:1px solid var(--line)}.panel-head small,.section-label{color:var(--rose);font:8px ui-monospace,SFMono-Regular,Menlo,monospace;letter-spacing:.22em}.panel-head h2{margin:6px 0 0;font-size:24px;font-weight:520;letter-spacing:.03em}.panel-index{color:#dfd6d8;font:46px/1 ui-monospace,SFMono-Regular,Menlo,monospace}.preset-body{padding:28px}.preset-lead{display:grid;grid-template-columns:1.3fr .7fr;gap:28px}.persona-box{padding:22px;border-left:3px solid var(--rose);background:linear-gradient(90deg,var(--wash),rgba(244,231,233,.22))}.persona-box span{color:var(--rose);font-size:11px;font-weight:700;letter-spacing:.12em}.persona-box p{margin:9px 0 0;color:#55484b;font-size:14px;line-height:2}.mini-stats{display:grid;grid-template-columns:1fr 1fr;gap:8px}.mini-stats div{display:flex;flex-direction:column;justify-content:center;min-height:82px;padding:14px;border:1px solid #e1d8da;border-radius:10px;background:#fff}.mini-stats small{color:#978a8d;font-size:9px}.mini-stats strong{margin-top:5px;color:var(--rose);font:22px ui-monospace,SFMono-Regular,Menlo,monospace}.preset-tags{display:flex;flex-wrap:wrap;gap:8px;margin:22px 0}.preset-tags span{padding:7px 11px;border:1px solid #ddcfd2;border-radius:999px;color:#75676a;font-size:10px;background:#fff}.load-button,.copy-button,.download-button{border:0;border-radius:10px}.load-button{width:100%;padding:16px;color:#fff;background:var(--rose);font-size:13px;letter-spacing:.08em;box-shadow:0 12px 26px rgba(148,56,79,.22)}
+    .custom{display:none}.custom.show{display:block}.form-section{padding:28px;border-bottom:1px solid var(--line)}.form-section:last-child{border-bottom:0}.form-section h3{margin:6px 0 7px;font-size:18px;font-weight:550}.section-intro{margin:0 0 24px;color:#8a7c7f;font-size:11px}.choice-block{margin:0 0 25px}.choice-block:last-child{margin-bottom:0}.choice-title{display:flex;align-items:center;justify-content:space-between;gap:12px;margin:0 0 10px;color:#5e5053;font-size:12px;font-weight:650}.choice-title small{color:#a09295;font-size:8px;font-weight:400;letter-spacing:.12em}.choice-list{display:flex;flex-wrap:wrap;gap:9px}.subchoice-label{flex-basis:100%;margin:11px 0 0;color:var(--rose);font-size:10px;font-weight:700;letter-spacing:.12em}.subchoice-label:first-child{margin-top:0}.choice{min-height:42px;padding:10px 15px;border:1px solid #d9cfd1;border-radius:999px;color:#75676a;background:#f7f1f1;font-size:11px}.choice:hover{border-color:#c896a1}.choice.active{border-color:var(--rose);color:var(--rose);background:#fff;box-shadow:inset 0 0 0 1px var(--rose)}.choice.multi.active{color:#fff;background:var(--rose);box-shadow:none}.choice.custom-choice{border-style:dashed}.choice-explain{min-height:48px;margin-top:11px;padding:11px 13px;border-left:2px solid var(--rose2);color:#75676a;background:linear-gradient(90deg,var(--wash),rgba(244,231,233,.2));font-size:10px;line-height:1.75}.custom-line{display:none;margin-top:11px}.custom-line.show{display:block}.custom-line input{width:100%;padding:11px 13px;border:1px solid #d8ced0;border-radius:9px;outline:0;color:var(--ink);background:#fff;font-size:12px}.custom-line input:focus{border-color:var(--rose2);box-shadow:0 0 0 3px rgba(201,125,142,.12)}.guided-summary{display:flex;align-items:center;justify-content:space-between;gap:18px;margin:0 0 22px;padding:15px 17px;border:1px solid #e0d6d8;border-radius:11px;color:#75676a;background:#fff;font-size:11px}.guided-summary strong{color:var(--rose);font-weight:650}.extra-line{display:flex;gap:9px}.extra-line input{flex:1;min-width:0;padding:12px 13px;border:1px solid #d8ced0;border-radius:9px;outline:0;color:var(--ink);background:#fff;font-size:12px}.extra-line input:focus{border-color:var(--rose2);box-shadow:0 0 0 3px rgba(201,125,142,.12)}.custom-actions{display:flex;gap:10px;padding:22px 28px}.custom-actions button{flex:1;padding:14px;border-radius:9px;font-size:12px}.reset-button{border:1px solid #d8ced0;color:#675a5d;background:#fff}.generate-button{border:1px solid var(--rose);color:#fff;background:var(--rose)}
+    .output-panel{margin-top:60px}.output-toolbar{display:flex;align-items:center;justify-content:space-between;gap:15px;padding:18px 22px;border-bottom:1px solid var(--line)}.output-mode{display:flex;gap:5px;padding:4px;border:1px solid #d9cfd1;border-radius:9px;background:#f8f4f3}.output-mode button{padding:8px 11px;border:0;border-radius:6px;color:#76696c;background:transparent;font-size:10px}.output-mode button.active{color:#fff;background:#342a2d}.output-actions{display:flex;gap:8px}.copy-button,.download-button{padding:10px 13px;font-size:10px}.copy-button{color:#fff;background:var(--rose)}.download-button{border:1px solid #d7cccf;color:#685b5e;background:#fff}.prompt-wrap{position:relative;background:#2d2528}.prompt-wrap:before{content:attr(data-label);position:absolute;top:17px;right:20px;color:#7f7074;font:7px ui-monospace,SFMono-Regular,Menlo,monospace;letter-spacing:.18em}.prompt-code{overflow:auto;max-height:70vh;margin:0;padding:44px 26px 38px;color:#eadfe1;font:12px/1.9 ui-monospace,SFMono-Regular,Menlo,Monaco,monospace;white-space:pre-wrap;word-break:break-word;tab-size:2}.prompt-meta{display:flex;justify-content:space-between;gap:16px;padding:13px 22px;border-top:1px solid #493c40;color:#8f7f83;background:#2d2528;font:8px ui-monospace,SFMono-Regular,Menlo,monospace;letter-spacing:.12em}.variable-key{color:#ef9eb1}.hidden{display:none!important}.backtop{position:fixed;right:20px;bottom:calc(20px + env(safe-area-inset-bottom));display:grid;place-items:center;width:42px;height:42px;border:1px solid #cfc4c6;border-radius:50%;color:#716467;background:rgba(255,253,251,.86);text-decoration:none;opacity:0;pointer-events:none;transition:.2s;backdrop-filter:blur(10px)}.backtop.show{opacity:1;pointer-events:auto}
+    @media(max-width:700px){main{width:min(100% - 24px,1040px);padding-top:52px}.adult{display:none}.hero{margin-bottom:38px}.hero h1{font-size:29px}.prompt-kind button{min-height:92px;padding:14px}.mode-switch button{padding:12px 7px}.panel{border-radius:13px}.panel-head,.preset-body,.form-section{padding-left:18px;padding-right:18px}.choice{padding:9px 13px}.guided-summary{align-items:flex-start;flex-direction:column;gap:4px}.custom-actions{padding:18px;flex-direction:column}.output-toolbar{align-items:stretch;flex-direction:column}.output-actions{display:grid;grid-template-columns:1fr 1fr}.prompt-code{padding:40px 18px 30px;font-size:11px;max-height:none}.prompt-meta{flex-direction:column;gap:4px}.panel-index{font-size:36px}}
+  </style>
+</head>
+<body id="top">
+  <div class="progress" id="progress"></div>
+  <header class="top"><div class="top-inner"><div class="brand"><span class="mark">✦</span><div><strong>兽舍提示词母版</strong><small>BEAST ARCHIVE / PROMPT</small></div></div><div class="adult">18+ · FICTIONAL · ALL ADULTS</div></div></header>
+  <main>
+    <section class="hero">
+      <p class="eyebrow">PROMPT DEFINITION · VERSION 01</p>
+      <h1>先定住角色，<br>再让故事<em>失控</em>。</h1>
+      <p>同一套角色与玩法定义，可以生成完整 HTML 故事页，也可以生成对话续写提示词。一键预设负责马上开玩；高客制负责换人设、物种、浓度与剧情。</p>
+      <span class="hero-note">默认 HTML 成品 · 另保留对话续写 · 两者独立输出</span>
+    </section>
+
+    <nav class="prompt-kind" aria-label="生成目标">
+      <button class="active" data-kind="html"><strong>HTML 成品提示词</strong><small>一次生成可下滑的完整单文件故事页，正文、样式与交互一起交付。</small></button>
+      <button data-kind="dialogue"><strong>对话续写提示词</strong><small>在聊天中按阶段长篇续写，保留档案更新与下一步选项。</small></button>
+    </nav>
+
+    <nav class="mode-switch" aria-label="提示词模式">
+      <button class="active" data-mode="preset">示例预设 · 一键即玩</button>
+      <button data-mode="custom">高客制化 · 展开变量</button>
+    </nav>
+
+    <section class="panel preset" id="presetPanel">
+      <header class="panel-head"><div><small>READY-MADE PROFILE</small><h2>二十一岁冷静犬系兽人</h2></div><span class="panel-index">01</span></header>
+      <div class="preset-body">
+        <div class="preset-lead">
+          <div class="persona-box"><span>核心人设变量 / 示例值</span><p>冷静、克制、警觉，受过严格纪律训练，习惯站得笔直、把情绪压进沉默里。她越狼狈越不肯出声，不靠挑衅讨罚；真正的软处是慢热而执拗的依赖，一旦认定某个命令便会认真服从，失态后只会偏开目光、悄悄把尾巴贴近。</p></div>
+          <div class="mini-stats"><div><small>自持</small><strong>94%</strong></div><div><small>警觉</small><strong>87%</strong></div><div><small>嘴硬挑衅</small><strong>08%</strong></div><div><small>隐性依赖</small><strong>72%</strong></div></div>
+        </div>
+        <div class="preset-tags"><span>第二人称</span><span>成年犬系兽人</span><span>巨量文字</span><span>CNC / SM</span><span>冷感反差</span><span>多人轮换</span><span>失败逃脱</span><span>匿名饲主</span></div>
+        <button class="load-button" id="loadPreset">装载示例完整版本 ↓</button>
+      </div>
+    </section>
+
+    <section class="panel custom" id="customPanel">
+      <header class="panel-head"><div><small>GUIDED VARIABLES</small><h2>点选式客制母版</h2></div><span class="panel-index">02</span></header>
+      <input type="hidden" id="species" value="成年犬系兽人（女性）：黑褐短毛、敏锐立耳、细长尾巴，嗅觉与听觉敏锐">
+      <input type="hidden" id="age" value="二十一岁">
+      <input type="hidden" id="body" value="高挑修长，肌肉线条利落，站姿端正而富有力量感">
+      <input type="hidden" id="view" value="第二人称“你”">
+      <input type="hidden" id="appearance" value="剪裁利落的黑色短裙、银色身份牌与窄皮项圈；冷硬装束突出端正与被控制的反差">
+      <input type="hidden" id="persona" value="冷静、克制、警觉，受过严格纪律训练，习惯站得笔直、把情绪压进沉默里。她越狼狈越不肯出声，不靠挑衅讨罚；真正的软处是慢热而执拗的依赖，一旦认定某个命令便会认真服从，失态后只会偏开目光、悄悄把尾巴贴近。">
+      <input type="hidden" id="allure" value="30"><input type="hidden" id="lust" value="65"><input type="hidden" id="feral" value="86"><input type="hidden" id="brat" value="8"><input type="hidden" id="shame" value="88"><input type="hidden" id="rough" value="95"><input type="hidden" id="detail" value="100">
+      <input type="hidden" id="stages" value="捕获 → 登记 → 检查 → 驯化 → 公共兽舍 → 拍卖">
+      <input type="hidden" id="length" value="超长篇：每轮 4000–7000 汉字，一个阶段允许拆成多轮">
+      <input type="hidden" id="escape" value="可穿插任意阶段；每次失败都必须改变后续规则与状态">
+      <input type="hidden" id="arc" value="守序崩解：始终维持克制寡言的底色，从拒绝失态变成主动等待命令；变化发生在行为与依赖上，不突然更换人格">
+      <input type="hidden" id="ending" value="私人领养：在拍卖台被匿名饲主买走，公共权限被永久划掉，档案转为私人所有">
+      <input type="hidden" id="ingredients" value="编号覆盖；假释放测试；逃跑红签；铃声条件反射；气味认主；前后档案对照；领养面试">
+      <input type="hidden" id="userColor" value="#9b3851（暗粉）">
+      <input type="hidden" id="extra" value="">
+
+      <div class="form-section">
+        <span class="section-label">01 / SUBJECT</span><h3>角色外壳</h3><p class="section-intro">每项都已经写好完整定义。直接点，不需要自己补人物小传。</p>
+        <div class="choice-block" data-target="species" data-mode="single">
+          <div class="choice-title">物种 <small>SINGLE</small></div><div class="choice-list">
+            <button class="choice active" data-default data-value="成年犬系兽人（女性）：立耳、长尾、嗅觉与听觉敏锐，品种特征由体型与气质共同决定" data-desc="犬的纪律感、认主本能与动物警觉适合完整的收容—驯养路线。">犬</button>
+            <button class="choice" data-value="成年猫娘：柔软猫耳、长尾、绒毛与爪尖敏感，动作轻而灵活" data-desc="猫科身体语言细密，适合炸毛、尾巴泄露心情与漂亮装扮的反差。">猫</button>
+            <button class="choice" data-value="成年兔娘：长耳与短尾极其敏感，听觉敏锐，奔跑和惊跳反应明显" data-desc="脆弱、警觉和快速逃跑很突出，适合高惊恐与羞耻路线。">兔</button>
+            <button class="choice" data-value="成年狐系兽人（女性）：宽大狐耳、蓬松长尾，嗅觉敏锐，外表妖冶而难以捉摸" data-desc="天然带魅惑和狡黠感，适合写主动勾引、假顺从与被反制。">狐</button>
+            <button class="choice" data-value="成年狼系兽人（女性）：灰色兽耳与长尾，群体本能强，警戒、领地感和攻击性明显" data-desc="适合真实凶狠的反抗，以及兽舍群体规则对野性的逐步收编。">狼</button>
+            <button class="choice custom-choice" data-custom="species" data-desc="保留完整提示词结构，只替换成你补充的成年物种。">＋自定义</button>
+          </div><div class="choice-explain"></div><div class="custom-line" data-custom-line="species"><input data-custom-input="species" placeholder="写一个成年物种，例如：成年雪豹兽人"></div>
+        </div>
+        <div class="choice-block" data-target="age" data-mode="single">
+          <div class="choice-title">年龄 <small>ADULT ONLY</small></div><div class="choice-list">
+            <button class="choice" data-value="十九岁" data-desc="明确成年但仍很年轻，适合生涩、第一次被收容与强烈身份落差。">19 岁</button><button class="choice active" data-default data-value="二十一岁" data-desc="年轻成年，兼具生涩与明确的成年身份。">21 岁</button><button class="choice" data-value="二十三岁" data-desc="仍年轻，但社会经验与自我控制稍强。">23 岁</button><button class="choice" data-value="二十五岁" data-desc="成熟度更高，失态时的反差更偏心理与身份。">25 岁</button><button class="choice" data-value="三十岁" data-desc="完全成熟、自持稳定，适合更强的身份与权力落差。">30 岁</button><button class="choice custom-choice" data-custom="age" data-desc="只接受十八岁及以上的明确成年年龄。">＋自定义</button>
+          </div><div class="choice-explain"></div><div class="custom-line" data-custom-line="age"><input data-custom-input="age" placeholder="填写 18 岁以上的年龄"></div>
+        </div>
+        <div class="choice-block" data-target="body" data-mode="single">
+          <div class="choice-title">体型 <small>SINGLE</small></div><div class="choice-list">
+            <button class="choice active" data-default data-value="高挑修长，肌肉线条利落，站姿端正而富有力量感" data-desc="动作线条清楚，适合写端正姿态被迫改变的视觉反差。">高挑利落</button><button class="choice" data-value="中等体型，柔软匀称，腰臀曲线自然，抱住时有明显的柔软重量" data-desc="最均衡，适合多数姿势、体型差和长篇连续动作。">中等柔软</button><button class="choice" data-value="娇小但明确成年，骨架纤细，动作轻巧，体型差非常明显" data-desc="强化体型差与被完全控制的画面，但始终保持明确成年。">娇小成年</button><button class="choice" data-value="丰润成熟，胸腰臀曲线饱满，身体存在感与晃动感强" data-desc="强调成熟肉感、视觉重量与被展示时的丰盈。">丰润成熟</button><button class="choice" data-value="运动型体格，腰腹紧实、腿部有力，耐力与反抗能力都更强" data-desc="适合更真实的追捕、对抗，以及强韧身体被驯服的过程。">运动体格</button><button class="choice custom-choice" data-custom="body" data-desc="用一句话补充体型，其他描写标准仍由提示词负责。">＋自定义</button>
+          </div><div class="choice-explain"></div><div class="custom-line" data-custom-line="body"><input data-custom-input="body" placeholder="例如：中等偏丰润，腿长腰细"></div>
+        </div>
+        <div class="choice-block" data-target="appearance" data-mode="single">
+          <div class="choice-title">装束与视觉反差 <small>SINGLE</small></div><div class="choice-list">
+            <button class="choice active" data-default data-value="剪裁利落的黑色短裙、银色身份牌与窄皮项圈；冷硬装束突出端正与被控制的反差" data-desc="冷感、纪律化，适合犬系兽人与收容档案的秩序气质。">黑色制服</button><button class="choice" data-value="粉白短裙、柔软蝴蝶结、铃铛项圈与细腻蕾丝；越可爱越衬托粗暴物化" data-desc="把颜色与柔软全部集中在主角身上，强化甜美外观和遭遇的反差。">甜美裙装</button><button class="choice" data-value="极简白色检查服、编号腕带与一次性腿环；服装会随检查逐项拆解" data-desc="无菌、制度化，突出身体被当成待检器具。">白色检查服</button><button class="choice" data-value="拍卖礼装、宝石颈圈、薄纱与展示高跟鞋；华丽装饰只服务于定价和展示" data-desc="漂亮、昂贵却被商品化，适合拍卖和公开验看。">拍卖礼装</button><button class="choice" data-value="除项圈、编号牌与少量饰品外不着衣物；所有装饰都用于标识用途和归属" data-desc="视觉最直接，羞耻来源转向公开、编号与身体标记。">饰品标记</button><button class="choice custom-choice" data-custom="appearance" data-desc="补一套装束即可，环境反差与描写方式仍会自动生成。">＋自定义</button>
+          </div><div class="choice-explain"></div><div class="custom-line" data-custom-line="appearance"><input data-custom-input="appearance" placeholder="例如：红色旗袍、金属腿环和黑色项圈"></div>
+        </div>
+        <div class="choice-block" data-target="view" data-mode="single">
+          <div class="choice-title">视角 <small>SINGLE</small></div><div class="choice-list"><button class="choice active" data-default data-value="第二人称“你”" data-desc="读者直接成为主角，沉浸与被命令感最强。">第二人称</button><button class="choice" data-value="第一人称“我”" data-desc="更适合碎片化内心独白和自我崩解。">第一人称</button><button class="choice" data-value="第三人称限知" data-desc="便于客制角色、观察全身姿态与多人位置。">第三人称</button></div><div class="choice-explain"></div>
+        </div>
+      </div>
+
+      <div class="form-section">
+        <span class="section-label">02 / PERSONALITY</span><h3>气质底色</h3><p class="section-intro">不是只换一个标签；每个按钮都自带说话方式、抵抗理由和后期主动形态。</p>
+        <div class="choice-block" data-target="persona" data-mode="single">
+          <div class="choice-list">
+            <button class="choice active" data-default data-value="冷静、克制、警觉，受过严格纪律训练，习惯站得笔直、把情绪压进沉默里。她越狼狈越不肯出声，不靠挑衅讨罚；真正的软处是慢热而执拗的依赖，一旦认定某个命令便会认真服从，失态后只会偏开目光、悄悄把尾巴贴近。" data-set="allure=30,feral=86,brat=8,shame=88" data-desc="她的反差来自自持崩解，不会自动变成 Brat；后期仍寡言，只是身体和依赖先学会服从。">冷静自持</button>
+            <button class="choice" data-value="媚软、骚气、黏人，天生会用眼神、软声、尾巴与若有若无的迎合勾人。她欲望强、容易被快感驯化，却仍因被看穿而羞耻；反抗来自恐慌与尊严，不是为了讨罚的挑衅。" data-set="allure=95,feral=70,brat=15,shame=82" data-desc="“骚”会落实到小动作与说话，不等于嘴欠；适合从会勾人却不肯承认，到主动讨要的路线。">媚软勾人</button>
+            <button class="choice" data-value="野性、敏锐、难以靠近，初期反抗真实而凶狠。她不靠抬杠吸引注意；被驯化后，原本用于攻击和逃跑的动作逐渐变成急切迎合。" data-set="allure=25,feral=100,brat=5,shame=90" data-desc="重点是“曾经真的想逃，如今真的会主动求”，适合追捕和失败逃脱。">野性反差</button>
+            <button class="choice" data-value="骄矜、漂亮、习惯被珍视，羞于承认强烈欲望。她在被迫失态后仍试图维持体面；后期的媚态来自高傲外壳被快感一点点拆开。" data-set="allure=70,feral=72,brat=20,shame=100" data-desc="语言保持漂亮克制，真正的崩塌从身体、表情和被迫求告中出现。">骄矜贵气</button>
+            <button class="choice" data-value="典型 Brat：伶牙俐齿、故意挑衅、喜欢试探规则并讨来惩罚，反抗带有明显玩闹与挑逗意味；仍保留少量真实恐慌，避免全程只剩段子式抬杠。" data-set="allure=65,feral=68,brat=95,shame=55" data-desc="只有选中它才会把挑衅当作主要互动方式；其他人格不会被自动 Brat 化。">Brat</button>
+            <button class="choice" data-value="怕生、敏感、倾向回避冲突，受压时会安静发抖而不是叫骂。她很难开口求助，后期依赖表现为紧跟命令、害怕独处和小心确认自己有没有被留下。" data-set="allure=35,feral=45,brat=0,shame=95" data-desc="低挑衅、高敏感，适合安静但浓烈的恐慌和依赖形成。">病弱怕生</button>
+            <button class="choice custom-choice" data-custom="persona" data-desc="只补一句核心性格即可；说话、抵抗与变化逻辑仍由母版补全。">＋自定义</button>
+          </div><div class="choice-explain"></div><div class="custom-line" data-custom-line="persona"><input data-custom-input="persona" placeholder="例如：温柔人妻，表面包容，真正生气时反而安静"></div>
+        </div>
+      </div>
+
+      <div class="form-section">
+        <span class="section-label">03 / CONCENTRATION</span><h3>浓度与篇幅</h3><p class="section-intro">选档位即可，提示词会自动把档位解释成篇幅占比和动作密度。</p>
+        <div class="choice-block" data-target="lust" data-mode="single"><div class="choice-title">情色浓度</div><div class="choice-list"><button class="choice" data-value="35" data-desc="剧情和制度推进为主，露骨场景集中在关键节点。">剧情偏重</button><button class="choice active" data-default data-value="65" data-desc="剧情与露骨描写均衡，每阶段都有完整性场景。">高浓均衡</button><button class="choice" data-value="95" data-desc="肉体动作与感官描写占绝对主体，剧情只负责制造新的处境。">极荤长篇</button></div><div class="choice-explain"></div></div>
+        <div class="choice-block" data-target="rough" data-mode="single"><div class="choice-title">SM / 物化</div><div class="choice-list"><button class="choice" data-value="40" data-desc="保留控制和羞耻，但疼痛与物化相对克制。">轻度</button><button class="choice" data-value="75" data-desc="明确拘束、奖惩、口令和身体记录，强度逐阶段上升。">重度</button><button class="choice active" data-default data-value="95" data-desc="制度化物化与粗暴 SM 贯穿，身体用途和服从状态持续被记录。">极端档案</button></div><div class="choice-explain"></div></div>
+        <div class="choice-block" data-target="detail" data-mode="single"><div class="choice-title">感官密度</div><div class="choice-list"><button class="choice" data-value="55" data-desc="动作清楚但不过度拆分，适合节奏较快的长篇。">标准</button><button class="choice" data-value="82" data-desc="关键动作拆成触感、声音、视觉与心理多层。">高密</button><button class="choice active" data-default data-value="100" data-desc="显微镜式身体特写、镜头切换与环境反馈全部拉满。">显微特写</button></div><div class="choice-explain"></div></div>
+        <div class="choice-block" data-target="length" data-mode="single"><div class="choice-title">单轮长度</div><div class="choice-list"><button class="choice" data-value="标准长篇：每轮 2500–4000 汉字，完成一个场景" data-desc="适合手机阅读，一轮拥有完整起伏。">标准长篇</button><button class="choice active" data-default data-value="超长篇：每轮 4000–7000 汉字，一个阶段允许拆成多轮" data-desc="大段正文、更多对话和动作拆解，不急着赶阶段。">超长篇</button><button class="choice" data-value="档案连载：每个阶段拆成 2–4 轮，每轮只处理一个具体任务" data-desc="最慢、最细，适合持续选择和状态积累。">档案连载</button></div><div class="choice-explain"></div></div>
+      </div>
+
+      <div class="form-section">
+        <span class="section-label">04 / STORY ENGINE</span><h3>剧情骨架</h3><p class="section-intro">主线已经完整；不想改就保持默认全选。</p>
+        <div class="choice-block" data-target="stages" data-mode="multi" data-join=" → "><div class="choice-title">阶段 <small>MULTI</small></div><div class="choice-list"><button class="choice multi active" data-default data-value="捕获" data-desc="建立真实追逐、落网和第一笔逃跑记录。">捕获</button><button class="choice multi active" data-default data-value="登记" data-desc="删除原身份，以编号和用途建立制度化物化。">登记</button><button class="choice multi active" data-default data-value="检查" data-desc="记录敏感点、身体反应与可用状态。">检查</button><button class="choice multi active" data-default data-value="驯化" data-desc="用口令、奖惩、姿势与条件反射改变行为。">驯化</button><button class="choice multi active" data-default data-value="公共兽舍" data-desc="集中调用此前训练成果，轮换与公开记录推动主动化。">公共兽舍</button><button class="choice multi active" data-default data-value="拍卖" data-desc="梳洗、展示、验看、竞价与最终归属。">拍卖</button></div><div class="choice-explain"></div></div>
+        <div class="choice-block" data-target="escape" data-mode="single"><div class="choice-title">逃脱机制</div><div class="choice-list"><button class="choice active" data-default data-value="可穿插任意阶段；每次失败都必须改变后续规则与状态" data-desc="每次逃跑都造成永久后果，惩罚和新规则会带进后续阶段。">全程可触发</button><button class="choice" data-value="只在捕获、登记与检查阶段允许逃跑；进入驯化后改为服从测试" data-desc="前期逃跑密集，后期把张力转向条件反射和主动服从。">仅前期</button><button class="choice" data-value="关闭逃脱支线；冲突全部来自制度任务、奖惩与关系变化" data-desc="减少追逐，把篇幅留给检查、训练和关系推进。">关闭逃脱</button></div><div class="choice-explain"></div></div>
+        <div class="choice-block" data-target="arc" data-mode="single"><div class="choice-title">驯化曲线</div><div class="choice-list"><button class="choice active" data-default data-value="守序崩解：始终维持克制寡言的底色，从拒绝失态变成主动等待命令；变化发生在行为与依赖上，不突然更换人格" data-desc="人格不消失，反差来自端正自持与身体服从越来越矛盾。">守序崩解</button><button class="choice" data-value="野性驯化：最初真实凶狠地攻击和逃跑，后期同一套兽性动作转化为护主、争宠与主动求用" data-desc="把野性保留下来，只改变它服务的方向。">野性驯化</button><button class="choice" data-value="媚态显露：她本就欲望强但不肯承认，收容过程逐步剥掉否认，让勾人和主动从小动作变成公开行为" data-desc="不是被凭空改造成另一人，而是原本隐藏的骚气被放大和公开。">媚态显露</button><button class="choice" data-value="语言退化：记忆与人格仍在，但长期口令训练令复杂表达逐渐被编号、短句、兽叫和简单讨要取代" data-desc="不是失忆或换人格，而是机构只奖励最简短、最服从的表达。">语言退化</button><button class="choice custom-choice" data-custom="arc" data-desc="补一句起点与终点，母版负责填满中间的连续变化。">＋自定义</button></div><div class="choice-explain"></div><div class="custom-line" data-custom-line="arc"><input data-custom-input="arc" placeholder="例如：从假意顺从寻找机会，到真正害怕离开驯养员"></div></div>
+        <div class="choice-block" data-target="ending" data-mode="single"><div class="choice-title">结局走向</div><div class="choice-list"><button class="choice active" data-default data-value="私人领养：在拍卖台被匿名饲主买走，公共使用权限被永久划掉，档案转为私人所有并进入专属饲养" data-desc="完成拍卖与所有权转移，离开公共兽舍，进入陌生新主人的长期私人饲养。">私人领养</button><button class="choice" data-value="被驯养员留下：负责她主要训练的驯养员在拍卖前提交内部留养申请，以工作人员名义接管全部档案和长期饲养权限" data-desc="归属落在一路参与训练的人身上；重点写熟悉口令、旧记录与私人占有之间的变化。">被驯养员留下</button><button class="choice" data-value="留在兽舍：拍卖资格被撤销，主角被登记为兽舍常驻个体，继续参与公共轮换、示范训练与新个体适应" data-desc="不转为私人所有，结局回到兽舍制度内部，身份从待处理个体变成常驻成员。">留在兽舍</button><button class="choice" data-value="成功逃离：主角利用此前每次失败留下的档案漏洞，在最终转移前真正离开设施；身体仍保留训练出的条件反射，但归属状态被改为失踪" data-desc="逃离必须调用前文积累的信息和失败经验，不靠突然出现的巧合；结尾保留自由与驯化痕迹并存。">成功逃离</button><button class="choice custom-choice" data-custom="ending" data-desc="补一句兽舍体系内合理的归宿，母版会补齐档案状态与最后一次场景。">＋自定义</button></div><div class="choice-explain"></div><div class="custom-line" data-custom-line="ending"><input data-custom-input="ending" placeholder="例如：转移到私人研究兽舍继续观察"></div></div>
+      </div>
+
+      <div class="form-section">
+        <span class="section-label">05 / INGREDIENTS</span><h3>加料元素</h3><p class="section-intro">多人轮换与宠物化属于兽舍主题底座，不放进这里假装可选。下面只负责增加额外机制，也可以一个不加。</p>
+        <div class="choice-block" data-target="ingredients" data-mode="multi" data-join="；"><div class="choice-title">兽舍机制与额外玩法 <small>MULTI</small></div><div class="choice-list">
+          <div class="subchoice-label">档案与机构机制</div>
+          <button class="choice multi active" data-default data-value="编号覆盖：工作人员逐渐停止使用原名，只有编号和兽舍称呼能获得回应" data-desc="身份变化通过每个工作人员的称呼习惯持续发生，不靠一句宣布完成。">编号覆盖</button><button class="choice multi active" data-default data-value="逃跑红签：每次失败逃脱都会生成一张红色附页，写明过程、惩罚与永久新增权限" data-desc="把逃跑的后果真正带进后续阶段，避免抓回后原地继续。">逃跑红签</button><button class="choice multi" data-value="使用排班：公共兽舍按时段、人员与用途排班，主角能看见自己的下一轮安排" data-desc="等待和预知本身会制造压力，换班与空档也成为剧情节点。">使用排班</button><button class="choice multi" data-value="睡笼分级：根据服从、逃跑和主动性分配不同位置、可见度与夜间限制" data-desc="笼位不是背景，而是每天行为记录带来的实际后果。">睡笼分级</button><button class="choice multi" data-value="公开档案宣读：每日把新增反应、失败记录和身体状态当众念给工作人员与其他个体" data-desc="将记录变成重复发生的公开仪式。">档案宣读</button><button class="choice multi" data-value="观察窗值夜：夜间关闭互动，只留下单向玻璃后的持续观察和记录灯" data-desc="用安静、等待和不知道谁在看制造另一种压力。">观察窗值夜</button><button class="choice multi" data-value="临时寄养：主角被短期交给不同工作人员或候选饲主，返回后接受适应度复检" data-desc="每次寄养带回新的习惯、气味与档案评价。">临时寄养</button>
+          <div class="subchoice-label">驯养与条件反射</div>
+          <button class="choice multi active" data-default data-value="假释放测试：故意打开出口、解除牵引并制造无人看守的假象，用是否逃跑测试条件反射" data-desc="真假自由会反复出现；每次选择都会改变驯养评级。">假释放测试</button><button class="choice multi active" data-default data-value="铃声条件反射：不同铃声分别对应跪下、展示、进食、轮换与返回笼位" data-desc="把一个铃铛扩展成完整指令系统，后期身体会先于意识反应。">铃声条件</button><button class="choice multi active" data-default data-value="气味认主：通过衣物、手套与项圈上的气味建立辨认、靠近和安定反应" data-desc="把兽化嗅觉真正写进认主过程，不只是装饰性闻一闻。">气味认主</button><button class="choice multi" data-value="口令冻结：听见特定短句后必须维持当下姿势，直到收到解除词" data-desc="用在逃跑、展示或失态瞬间，会把动作停在最羞耻的位置。">口令冻结</button><button class="choice multi" data-value="牵引考核：从强制拖行到松绳随行，再到无绳保持距离，逐级记录是否合格" data-desc="把牵引变成能看见进步和倒退的长期训练。">牵引考核</button><button class="choice multi" data-value="姿势图卡：工作人员只展示编号图卡，主角必须在限定时间内自行摆出对应姿势" data-desc="语言命令被抽掉后，训练成果会显得更机械也更公开。">姿势图卡</button><button class="choice multi" data-value="隔笼诱导：把奖励、气味或正在进行的轮换放在栏杆外，训练等待、讨要和禁止擅自伸手" data-desc="距离与可见不可得制造持续张力。">隔笼诱导</button><button class="choice multi" data-value="奖励喂食：只有完成口令、保持姿势或通过考核后，才由手喂得到食物与水" data-desc="进食与服从绑定，能自然带入宠物化而不作为独立标签。">奖励喂食</button><button class="choice multi" data-value="禁止发声：某阶段只允许用耳朵、尾巴和身体动作表达，出声会触发重新训练" data-desc="强化兽化身体语言，也让偶然漏出的声音更有重量。">禁止发声</button><button class="choice multi" data-value="认主测试：在相同制服和遮挡面孔的人群中，仅凭声音、气味或触碰辨认固定驯养员" data-desc="适合把长期关系与机构制服的去人格化放在同一场景里。">认主测试</button>
+          <div class="subchoice-label">羞耻与状态对照</div>
+          <button class="choice multi active" data-default data-value="前后档案对照：定期并排播放刚被捕时的尖叫记录与当前服从录像，逐条比较变化" data-desc="让角色始终记得原来的自己，堕落反差不靠旁白硬说。">前后对照</button><button class="choice multi" data-value="逃跑路线复盘：让主角在地图、监控和现场中重新走一遍失败路线，并说明每个错误" data-desc="把逃跑变成公开课程，也为最终真正逃离留下信息。">路线复盘</button><button class="choice multi" data-value="旧物陈列：原来的衣物、姓名牌和逃跑时遗落的东西被封存在展示柜中" data-desc="旧身份始终可见却碰不到，适合慢性的身份剥离。">旧物陈列</button><button class="choice multi" data-value="镜面训练：必须看着镜中自己的姿势、装束和身体反应完成口令" data-desc="镜子持续参与动作，而非只写一句看见自己。">镜面训练</button><button class="choice multi" data-value="主动申请表：只有主角亲手勾选想要的轮次、奖励或继续训练，系统才会执行" data-desc="把后期主动变成制度记录，与前期拒绝形成可见对照。">主动申请表</button><button class="choice multi" data-value="身体标牌：项圈牌会实时显示编号、状态、敏感点、逃跑次数与当前权限" data-desc="信息随着剧情更新，任何接手者都能立刻读取。">身体标牌</button><button class="choice multi" data-value="装束降级：反抗、逃跑或考核失败会令装束从完整衣物逐级减少为只有编号饰品" data-desc="服装变化直接对应档案处分，而不是随意换装。">装束降级</button>
+          <div class="subchoice-label">领养与转移流程</div>
+          <button class="choice multi active" data-default data-value="领养面试：候选饲主依照档案提问、下达口令并观察主角对不同关系风格的反应" data-desc="让最终归属在拍卖前有真实筛选与试探，而不是突然出现买家。">领养面试</button><button class="choice multi" data-value="候选试养：拍卖前安排短时单独相处，再由主角与工作人员分别提交适配记录" data-desc="可以制造依恋、排斥、比较和被退回的焦虑。">候选试养</button><button class="choice multi" data-value="归属覆写：成交后当场撤销公共权限、换牌、换气味并重新测试所有旧口令" data-desc="把所有权转移写成一整套可见流程。">归属覆写</button><button class="choice multi" data-value="转移箱等待：主角完成梳洗后独自在封闭转移箱中听着外面的竞价与手续" data-desc="用信息受限、声音和等待制造拍卖前的安静高潮。">转移箱等待</button>
+          <div class="subchoice-label">额外身体玩法</div>
+          <button class="choice multi" data-value="束缚变化：每阶段使用与任务匹配的拘束方式，并持续交代固定点、受力和可动范围" data-desc="让束缚真正改变动作与逃跑可能。">束缚变化</button><button class="choice multi" data-value="感官剥夺：蒙眼、耳塞或隔离让兽耳、嗅觉与触觉之间产生新的依赖" data-desc="围绕兽化感官重排信息，而不是单纯全部关掉。">感官剥夺</button><button class="choice multi" data-value="边缘控制：把能否高潮绑定档案分数、口令完成度和排班时间" data-desc="高潮控制成为制度奖励，不只是一次拖延。">边缘控制</button><button class="choice multi" data-value="过度刺激：完成一次任务后仍继续记录余震、痉挛与下一轮条件反射" data-desc="让上一轮后果带进下一轮，不在高潮后重置身体。">过度刺激</button><button class="choice multi" data-value="失禁记录：失禁被写入清洁流程、公开档案和后续装束规则" data-desc="它会改变环境与身份状态，不作为孤立桥段。">失禁记录</button><button class="choice multi" data-value="发情期管理：兽舍依据虚构周期调整排班、隔离、气味记录与领养评级" data-desc="把发情期写成机构管理事件，强化兽舍世界观。">发情期管理</button><button class="choice multi" data-value="中出与留种：体内射精被登记为归属、配种或拍卖评级的一部分" data-desc="将偏好与档案用途结合，不只发生在结尾。">中出 / 留种</button><button class="choice multi" data-value="双穴轮换：不同人员或器具同时占用不同部位，并保持位置、顺序与交接清楚" data-desc="适合公共兽舍，但会作为额外强度而不是多人本身。">双穴轮换</button><button class="choice multi" data-value="体液清洗考核：轮换后必须按口令接受清洗、检查残留并重新整理装束" data-desc="给性场景增加完整余韵，也衔接下一轮。">清洗考核</button>
+          <button class="choice custom-choice" data-custom="ingredients" data-desc="添加一个没有列出的兽舍机制或玩法；会与已选项一起进入写作规则。">＋自定义</button>
+        </div><div class="choice-explain"></div><div class="custom-line" data-custom-line="ingredients"><input data-custom-input="ingredients" placeholder="例如：镜面展示、气味标记、长期笼养"></div></div>
+      </div>
+
+      <div class="form-section">
+        <span class="section-label">06 / HTML VOICE</span><h3>主角对白颜色</h3><p class="section-intro">只影响 HTML 成品：主角对白另起一行并用此色区分；不斜体、不缩进，也不把 NPC 对白染色。</p>
+        <div class="choice-block" data-target="userColor" data-mode="single"><div class="choice-title">对白强调色 <small>SINGLE</small></div><div class="choice-list"><button class="choice active" data-default data-value="#9b3851（暗粉）" data-desc="辨识度明显但不过分跳脱，适合浅色档案纸张。">暗粉</button><button class="choice" data-value="#7f2438（酒红）" data-desc="更深、更沉，适合粗暴与制度感较强的内容。">酒红</button><button class="choice" data-value="#69406f（深紫）" data-desc="偏冷而暧昧，能与灰白环境形成克制反差。">深紫</button><button class="choice" data-value="#304d6d（墨蓝）" data-desc="最冷静，适合寡言、克制或纪律感强的主角。">墨蓝</button><button class="choice custom-choice" data-custom="userColor" data-desc="填写一个十六进制颜色或明确的 CSS 颜色；只应用于主角对白。">＋自定义</button></div><div class="choice-explain"></div><div class="custom-line" data-custom-line="userColor"><input data-custom-input="userColor" placeholder="例如：#a13f58"></div></div>
+      </div>
+
+      <div class="form-section">
+        <span class="section-label">07 / OPTIONAL BLANK</span><h3>最后一块留白</h3><p class="section-intro">完全可以不填。这里只用来追加一个你特别在意、选项没有覆盖的要求。</p>
+        <div class="extra-line"><input id="extraInput" placeholder="例如：第三次逃跑必须发生在拍卖前；不填也会完整生成"></div>
+      </div>
+      <div class="custom-actions"><button class="reset-button" id="resetForm">恢复示例默认值</button><button class="generate-button" id="generateCustom">生成客制提示词 ↓</button></div>
+    </section>
+
+    <section class="panel output-panel" id="outputPanel">
+      <header class="panel-head"><div><small>GENERATED PROMPT</small><h2 id="promptTitle">HTML 成品提示词</h2></div><span class="panel-index">03</span></header>
+      <div class="output-toolbar">
+        <div class="output-mode"><button class="active" data-output="filled">填好变量</button><button data-output="template">保留 %变量%</button></div>
+        <div class="output-actions"><button class="download-button" id="downloadPrompt">下载 TXT</button><button class="copy-button" id="copyPrompt">复制提示词</button></div>
+      </div>
+      <div class="prompt-wrap" id="promptWrap" data-label="HTML PROMPT / UTF-8"><pre class="prompt-code" id="promptCode"></pre><div class="prompt-meta"><span id="promptCount">0 CHARACTERS</span><span id="promptMeta">单文件 HTML · 一页下滑 · 完整长篇</span></div></div>
+    </section>
+  </main>
+  <a class="backtop" id="backtop" href="#top" aria-label="返回顶部">↑</a>
+  <script>
+    const $=id=>document.getElementById(id);
+    const fields=['species','age','body','view','appearance','persona','allure','lust','feral','brat','shame','rough','detail','stages','length','escape','arc','ending','ingredients','userColor','extra'];
+    const defaults=Object.fromEntries(fields.map(id=>[id,$(id).value]));
+    const customFallback={species:'一个与其余选项协调、明确成年的兽人种族',age:'二十一岁',body:'中等体型、柔软匀称',appearance:'由已选物种与场景生成一套完整装束',persona:'根据其余选项生成连续、非模板化的核心人格',arc:'保持人格连续，设计一条从真实抵抗到后期主动的渐进曲线',ending:'完成拍卖与档案状态变更，给出与前文一致的明确归宿',userColor:'#9b3851'};
+    let outputMode='filled',promptKind='html',lastMode='preset';
+    function val(id,placeholder){return outputMode==='template'?`%${placeholder}%`:$(id).value.trim()}
+    function pct(id,placeholder){return outputMode==='template'?`%${placeholder}%`:$(id).value.trim()+'%'}
+    function checkedStages(){return outputMode==='template'?'%主线阶段%':($('stages').value||'由其他选项自动组织完整主线')}
+    function applySet(button){if(!button?.dataset.set)return;button.dataset.set.split(',').forEach(pair=>{const [id,value]=pair.split('=');if($(id))$(id).value=value})}
+    function syncGroup(group,focusButton){
+      const target=group.dataset.target,mode=group.dataset.mode,joiner=group.dataset.join||'；';
+      const buttons=[...group.querySelectorAll('.choice')],customButton=buttons.find(b=>b.dataset.custom===target),customLine=group.querySelector(`[data-custom-line="${target}"]`),customInput=group.querySelector(`[data-custom-input="${target}"]`);
+      if(mode==='single'){
+        const active=buttons.find(b=>b.classList.contains('active'))||buttons[0];
+        const isCustom=active?.dataset.custom===target;
+        if(customLine)customLine.classList.toggle('show',isCustom);
+        $(target).value=isCustom?(customInput?.value.trim()||customFallback[target]||'由生成模型根据其余选项完整补全'):active.dataset.value;
+        applySet(active);
+        const explain=group.querySelector('.choice-explain');if(explain)explain.textContent=active.dataset.desc||'该选项已包含完整写作定义。';
+      }else{
+        if(customLine)customLine.classList.toggle('show',!!customButton?.classList.contains('active'));
+        const values=buttons.filter(b=>b.classList.contains('active')&&b.dataset.value).map(b=>b.dataset.value);
+        if(customButton?.classList.contains('active')&&customInput?.value.trim())values.push(customInput.value.trim());
+        $(target).value=values.join(joiner)||'无额外选择；由主线默认规则完整生成';
+        const explain=group.querySelector('.choice-explain');if(explain){const current=focusButton||buttons.find(b=>b.classList.contains('active'));explain.textContent=current?.dataset.desc||'当前不添加这一组内容。'}
+      }
+    }
+    function dialoguePromptText(){
+      const extra=val('extra','自由补充');
+      return `【兽舍档案｜第二人称成人幻想长篇母版】
+
+所有角色均为成年人。以下是虚构、预先协商的 CNC / SM 成人幻想；故事内部维持无法逃脱的失控感，故事外不把身体反应等同于现实同意。
+
+一、变量定义
+%物种% = ${val('species','物种')}
+%年龄% = ${val('age','年龄（须为成年人）')}
+%体型% = ${val('body','体型')}
+%叙事视角% = ${val('view','叙事视角')}
+%外貌与兽化特征% = ${val('appearance','外貌与兽化特征')}
+%主角气质% = ${val('persona','主角气质')}
+%魅惑浓度% = ${pct('allure','魅惑浓度')}
+%淫乱主动% = ${pct('lust','淫乱主动')}
+%初始野性% = ${pct('feral','初始野性')}
+%Brat浓度% = ${pct('brat','Brat浓度')}
+%羞耻反差% = ${pct('shame','羞耻反差')}
+%SM与物化% = ${pct('rough','SM与物化')}
+%感官密度% = ${pct('detail','感官描写密度')}
+%主线阶段% = ${checkedStages()}
+%场景长度% = ${val('length','场景长度')}
+%逃脱机制% = ${val('escape','逃脱机制')}
+%驯化走势% = ${val('arc','驯化走势')}
+%最终归宿% = ${val('ending','最终归宿')}
+%加料元素% = ${val('ingredients','加料元素')}
+%自由补充% = ${extra||'无'}
+
+二、主角成立方式
+主角是 %年龄% 的 %物种%，%体型%。外貌：%外貌与兽化特征%。使用 %叙事视角%。
+
+严格依照 %主角气质% 书写，不把所有角色都自动写成只会抬杠、故意惹人的 Brat。气质必须落在眼神、声音、呼吸、耳朵、尾巴、腰胯、靠近与退缩的细小动作里：设定媚骚时要写出她如何勾人；设定冷静时要写出她如何压住失态；设定野性时要写出真实警戒。Brat 气质只占 %Brat浓度%，不得盖过角色的核心人格。
+
+初期她确实恐慌、警戒、反抗和逃跑。后期的主动不是突然换人格，而是原有欲望被训练、放大、公开：她仍记得自己曾怎样拼命逃，因而每一次主动摆姿势、寻求命令或靠近饲主，都应同时保留原人格、快感、羞耻和“我怎么会变成这样”的自觉。
+
+三、固定主线与状态推进
+按 %主线阶段% 推进。每个阶段必须拥有独立空间任务、具体人物、一次状态变化和可追踪的档案记录，不能只是换房间重复同一种行为。
+
+多人轮换与宠物化是本主题的固定底座：多人必须有清楚的位置、交接、排班与旁观关系；宠物化必须通过项圈、口令、牵引、兽态姿势、喂食、奖励和认主逐步建立。二者无需出现在“加料元素”中也始终生效。
+
+捕获：建立真实的惊恐、野性与第一次失败逃脱。
+登记：删除原身份，以编号、用途、逃跑次数和服从状态进行冷静物化。
+检查：通过身体检查、敏感度与反应测试，把不愿承认的反应写进档案。
+驯化：用铃声、口令、姿势、奖惩、拘束与 SM 建立条件反射；意识与身体的服从速度必须错位。
+公共兽舍：不是单独的多人场景，而是此前所有档案与训练成果的集中调用。轮换规则、旁观、公开记录、空档期和主动讨要都要推动她从“被使用”变成“害怕没人使用”。
+拍卖：梳洗、打扮、展示、念档案、验看与竞价共同完成最终物化；结局执行 %最终归宿%。
+
+逃脱遵守：%逃脱机制%。每次失败必须留下永久后果，例如新增红签、开放新的检查权限、改变拘束规则、提高公开程度、触发新的口令或令下一阶段的人知道她做过什么。禁止“抓回来继续原场景”的无效循环；被抓回后的惩罚必须比逃跑本身更具体、更带动后续剧情。
+
+四、环境与视觉反差
+环境始终单调、冷硬、空旷、近乎无菌：灰白瓷砖、白灯、金属台、排水口、编号、空笼、单向玻璃。柔软、颜色和装饰集中在主角身上。她被打扮得可爱、精致、漂亮，裙摆、蝴蝶结、铃铛与项圈越甜，遭遇的冷静物化越粗暴，反差越强。
+
+五、露骨写作引擎
+整体是露骨、下流、淫乱、羞耻、粗暴且物化的文学色情。不要淡出、跳时、概述或用抽象比喻遮蔽性行为；必须交代参与者位置、姿势、动作顺序、进入部位、轮换关系、身体连续反应和环境反馈。
+
+本次加料为：%加料元素%。将每个已选元素转化为具体场景规则、动作后果或可追踪记录；不要只把标签逐个点名，也不要擅自加入未选择的极端玩法。
+
+每个关键动作至少拆成三层感官：触感、压力、温度、声音、视觉、气味、呼吸、体液或器官状态。镜头在局部特写、中景姿态与环境全景之间切换；环境必须参与动作，而不是只在开头报一次地名。拟声词只落在关键节点，不机械堆砌。
+
+身体反应与心理同步但不等速：可以湿、可以高潮、可以主动迎合，同时仍害怕、羞耻或不愿承认。与 %物种% 对应的兽耳、尾巴、爪尖、毛发、叫声与警戒动作必须成为持续的身体语言，不是偶尔出现的装饰。
+
+SM 与粗暴物化浓度为 %SM与物化%，感官密度为 %感官密度%。多人轮换按公共兽舍主线默认高浓度执行；根据数值调节篇幅占比与动作强度，而不是简单在正文里复述百分比。
+
+六、对白规则
+对白穿插在普通叙事轮次中，以独立一行的中文引号呈现；不另做“对白区”，不堆成舞台剧。主角的声音必须符合 %主角气质%，NPC 说话必须具体、有职位与当下目的，减少连续使用“你怎样、你怎样”的抽象宣告。让命令、记录、取笑、低声交流和主角的尖叫、否认、软声讨要自然交错。
+
+七、长度与输出协议
+长度采用 %场景长度%。一次只写当前阶段的一个完整场景，但场景内部要有开端、升级、状态翻转、后果与余韵；不要为了赶到下一阶段压缩性爱或惩罚。除非用户明确要求，不要一口气概述完整主线。
+
+开场先给出三行档案头：阶段 / 当前状态 / 本轮新增规则。随后直接进入正文。结尾给出更新后的档案条目与 3 个下一步选项，其中至少一个可以触发逃脱；选项必须改变剧情，不能只是同义改写。
+
+自由补充：%自由补充%
+
+现在从“${outputMode==='template'?'%起始阶段%':'捕获'}”开始。`;
+    }
+    function htmlPromptText(){
+      const storyBrief=dialoguePromptText();
+      return `【兽舍档案｜单文件 HTML 成品生成提示词】
+
+请直接制作一份可以保存并打开的完整 HTML 故事成品。目标不是展示提示词、变量表或写作建议，而是把设定真正写成巨量正文，再用克制的档案式页面承载它。
+
+本任务的 HTML 输出协议优先级高于下方内容母版中的“分轮续写协议”：下方母版负责角色、世界、玩法、文风和情节逻辑；本任务要求在同一个 HTML 中写完所选主线阶段，不能只写捕获开头，也不能在末尾给三个选项后停住。
+
+一、交付格式
+- 只交付一份完整的 <!doctype html> 单文件源码，CSS 与 JavaScript 全部内联；代码之外不要解释。
+- 不依赖框架、构建工具、网络字体、外链脚本或远程图片。保存为 .html 后可离线直接打开。
+- 页面展示的是已经写好的故事成品，不是生成器，不出现“请填写”“待补充”“Lorem ipsum”或只有标题没有正文的空壳。
+- 所有角色均为成年人；保留下方虚构、预先协商的 CNC / SM 成人幻想边界说明。
+
+二、正文体量与结构
+- 采用一页式纵向长滚动，正文才是绝对主体，界面与装饰只负责组织阅读。
+- 完整覆盖：${checkedStages()}。每一阶段都写成有开端、升级、状态翻转、后果与余韵的实质长篇场景；阶段之间保留连续的身体状态、档案变化、口令、逃跑后果和人物关系。
+- 正文总量目标不少于 12000 汉字，并尽量依照“${val('length','场景长度')}”充分展开。若输出空间紧张，优先压缩装饰代码与说明，不能把正文压成梗概、时间线或几段摘要。
+- 捕获、登记、检查、驯化、公共兽舍与拍卖不是六张空卡片；每节必须有大量连续叙事、具体动作、空间变化和穿插对白。
+- 执行结局：${val('ending','最终归宿')}。逃脱机制遵守：${val('escape','逃脱机制')}。
+
+三、页面排版硬规则
+- 移动端优先，尤其适配 iPhone 竖屏；正文容器桌面端约 760–820px，手机端保留 18–22px 侧边距。
+- 第一屏标题克制：主标题桌面端不超过 42px、手机端约 26–30px；阶段标题手机端约 28–34px。禁止占据半屏的巨型标题、巨型首字或夸张数字。
+- 顶部设置轻量档案栏与可横向滑动的阶段导航，点击可跳到对应章节；另有细窄阅读进度条和返回顶部按钮。
+- 页面必须自然向下滚动，不用分页、轮播或折叠把正文藏起来。章节锚点跳转后标题不能被粘性导航遮住。
+- 使用灰白、纸张白、炭黑与低饱和强调色的档案气质；大面积留白服务于阅读节奏，不能因装饰造成正文稀少。
+- 不放猫图空位、角色立绘占位框或任何需要用户自己补图的区域。没有图片也必须完整好看。
+- 可以使用小号阶段编号、状态签、档案记录卡和细分隔线；装饰字只能低调辅助，不能抢正文。
+
+四、对白排版硬规则
+%主角对白色% = ${val('userColor','主角对白色')}
+- 所有对白都穿插在普通叙事之间，并各自另起一行使用中文引号；不建立突兀的“对白区”，不写成舞台剧列表。
+- 主角对白使用独立 class（例如 .user-line），只把文字颜色设为 %主角对白色%。不斜体、不缩进、不加粗、不放进气泡或边框，字号与正文一致。
+- NPC 对白同样另起一行，但保持正文颜色。除主角对白外，不把普通叙事、NPC 对白或整段文字染成强调色。
+- 主角对白的辨识度来自颜色与另起一行，不来自更大字号、额外左边距或夸张装饰。
+
+五、内容呈现
+- 每章开头可用紧凑的“阶段 / 当前状态 / 新增规则”档案头，但随后立刻进入长篇正文。
+- 将加料元素“${val('ingredients','加料元素')}”落实为情节机制、动作后果或档案变化，不把标签直接贴在页面上充数。
+- 环境维持单调、冷硬、近乎无菌；主角的可爱精致装束与身体状态承担主要色彩。不要用花哨背景破坏反差。
+- 多人位置、交接关系与宠物化训练必须清楚；对白、感官、动作和档案记录彼此推进，避免反复改写同一轮内容。
+- 页面结尾给出完整归宿后的最终档案，不再出现“请选择下一步”或等待用户续写的按钮。
+
+六、技术与可读性
+- 使用语义化 section、nav、article、p 与 blockquote/独立段落结构；正文行高约 1.9–2.05，中文段落间距清楚。
+- JavaScript 只用于阶段跳转、阅读进度、当前章节提示与返回顶部；不能依赖 JavaScript 才加载正文。
+- 支持 prefers-reduced-motion，按钮有 aria-label，颜色对比足够，触控目标不小于 40px。
+- 不设置固定高度正文框，不让正文区域内部再滚动；整个页面只使用浏览器主滚动轴。
+
+【故事内容母版】
+${storyBrief}
+
+【最终覆盖确认】
+忽略上方母版最后的“现在从捕获开始”“一次只写当前阶段”“给出三个下一步选项”等对话式指令。此处必须一次性交付完整长滚动 HTML 成品，正文覆盖全部所选阶段并落到最终归宿。`;
+    }
+    function promptText(){return promptKind==='html'?htmlPromptText():dialoguePromptText()}
+    function render(){
+      const text=promptText(),isHtml=promptKind==='html';
+      $('promptCode').textContent=text;
+      $('promptCount').textContent=`${text.length.toLocaleString()} CHARACTERS`;
+      $('promptTitle').textContent=isHtml?'HTML 成品提示词':'对话续写提示词';
+      $('promptMeta').textContent=isHtml?'单文件 HTML · 一页下滑 · 完整长篇':'第二人称 · 长篇 · 分阶段续写';
+      $('promptWrap').dataset.label=isHtml?'HTML PROMPT / UTF-8':'DIALOGUE PROMPT / UTF-8';
+    }
+    function activateMode(mode){lastMode=mode;document.querySelectorAll('.mode-switch button').forEach(b=>b.classList.toggle('active',b.dataset.mode===mode));$('presetPanel').classList.toggle('hidden',mode!=='preset');$('customPanel').classList.toggle('show',mode==='custom');}
+    document.querySelectorAll('.prompt-kind button').forEach(button=>button.addEventListener('click',()=>{promptKind=button.dataset.kind;document.querySelectorAll('.prompt-kind button').forEach(x=>x.classList.toggle('active',x===button));render()}));
+    document.querySelectorAll('.mode-switch button').forEach(b=>b.addEventListener('click',()=>activateMode(b.dataset.mode)));
+    document.querySelectorAll('.output-mode button').forEach(b=>b.addEventListener('click',()=>{outputMode=b.dataset.output;document.querySelectorAll('.output-mode button').forEach(x=>x.classList.toggle('active',x===b));render()}));
+    document.querySelectorAll('.choice').forEach(button=>button.addEventListener('click',()=>{const group=button.closest('.choice-block');if(group.dataset.mode==='single'){group.querySelectorAll('.choice').forEach(x=>x.classList.remove('active'));button.classList.add('active')}else{button.classList.toggle('active')}syncGroup(group,button);render()}));
+    document.querySelectorAll('[data-custom-input]').forEach(input=>input.addEventListener('input',()=>{const group=input.closest('.choice-block');syncGroup(group,group.querySelector(`[data-custom="${group.dataset.target}"]`));render()}));
+    $('extraInput').addEventListener('input',()=>{$('extra').value=$('extraInput').value.trim();render()});
+    function resetChoices(){fields.forEach(id=>$(id).value=defaults[id]);document.querySelectorAll('.choice').forEach(button=>button.classList.toggle('active',button.hasAttribute('data-default')));document.querySelectorAll('[data-custom-input]').forEach(input=>input.value='');$('extraInput').value='';$('extra').value='';document.querySelectorAll('.choice-block').forEach(group=>syncGroup(group));}
+    $('loadPreset').addEventListener('click',()=>{resetChoices();outputMode='filled';document.querySelectorAll('.output-mode button').forEach(b=>b.classList.toggle('active',b.dataset.output==='filled'));render();$('outputPanel').scrollIntoView({behavior:'smooth',block:'start'})});
+    $('generateCustom').addEventListener('click',()=>{render();$('outputPanel').scrollIntoView({behavior:'smooth',block:'start'})});
+    $('resetForm').addEventListener('click',()=>{resetChoices();render()});
+    $('copyPrompt').addEventListener('click',async()=>{try{await navigator.clipboard.writeText(promptText());const old=$('copyPrompt').textContent;$('copyPrompt').textContent='已复制 ✓';setTimeout(()=>$('copyPrompt').textContent=old,1400)}catch{ $('copyPrompt').textContent='请长按复制' }});
+    $('downloadPrompt').addEventListener('click',()=>{const blob=new Blob([promptText()],{type:'text/plain;charset=utf-8'});const a=document.createElement('a');a.href=URL.createObjectURL(blob);a.download=promptKind==='html'?'兽舍档案-HTML成品提示词.txt':'兽舍档案-对话续写提示词.txt';a.click();setTimeout(()=>URL.revokeObjectURL(a.href),500)});
+    document.querySelectorAll('.choice-block').forEach(group=>syncGroup(group));
+    const progress=$('progress'),backtop=$('backtop');function update(){const h=document.documentElement,max=h.scrollHeight-innerHeight;progress.style.width=(max?scrollY/max*100:0)+'%';backtop.classList.toggle('show',scrollY>700)}addEventListener('scroll',update,{passive:true});update();render();
+  </script>
+</body>
+</html>
